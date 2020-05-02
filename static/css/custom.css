@@ -1,0 +1,15 @@
+.logo {
+    padding: 25px;
+    background: url(/images/bg_timeout.jpg);
+    height: 300px;
+    background-size: cover;
+}
+
+.logo__title {
+    font-size: 32px;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: white;
+    text-transform: none;
+}
