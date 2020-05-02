@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+<article class="list__item post">
+
+<h2>Archive</h2>
+
+{{ range .Site.Pages.GroupByDate "2006" }}
+{{ if ne .Key "0001" }}
+
+<h2 id="{{ .Key }}">{{ .Key }}</h2>
+{{ range .Pages }}
+{{ if .Content }}
+<header class="list__header" style="padding-left: 40px;">
+  <p class="list__title post__title ">
+    <a href="{{ .RelPermalink }}" rel="bookmark">
+      {{ .Title }}
+    </a>
+  </p>
+  {{- with .Params.lead }}
+  <p class="list__lead post__lead">{{ . }}</p>
+  {{- end }}
+  {{ with partial "post_meta.html" . -}}
+  <div class="list__meta meta">{{ . }}</div>
+  {{- end }}
+</header>
+
+{{ end }}
+{{ end }}
+        
+{{ end }}
+{{ end }}
+
+
+</article>
+{{ end }}
