@@ -39,32 +39,33 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
 [Params.sidebar]
   home = "right" # Configure layout for home page
-  list = "left"  # Configure layout for list pages
-  single = false # Configure layout for single pages
+  list = "right"  # Configure layout for list pages
+  single = "right" # Configure layout for single pages
   # Enable widgets in given order
-  widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
+  # widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
+  widgets = ["recent", "taglist", "social"]
 
 [Params.widgets]
   recent_num = 5 # Set the number of articles in the "Recent articles" widget
-  tags_counter = false # Enable counter for each tag in "Tags" widget
+  tags_counter = true # Enable counter for each tag in "Tags" widget
 
 [Params.widgets.social]
   # Enable parts of social widget
-  facebook = "username"
-  twitter = "username"
-  instagram = "username"
-  linkedin = "username"
-  telegram = "username"
-  github = "username"
-  gitlab = "username"
-  bitbucket = "username"
-  email = "example@example.com"
+  facebook = "nishijima.koichiro"
+  twitter = "k_nishijima"
+#  instagram = "username"
+#  linkedin = "username"
+#  telegram = "username"
+  github = "k-nishijima"
+#  gitlab = "username"
+#  bitbucket = "username"
+#  email = "example@example.com"
 
 # Custom social links
 
 [[Params.widgets.social.custom]]
-  title = "My Home Page"
-  url = "http://example.com"
+  title = "My Blog Archive"
+  url = "https://k-nishijima.github.io"
 
 
 [markup.goldmark.renderer]
