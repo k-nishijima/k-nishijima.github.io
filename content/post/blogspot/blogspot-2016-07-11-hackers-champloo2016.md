@@ -17,7 +17,7 @@ title = "\u30cf\u30c3\u30ab\u30fc\u30ba\u30c1\u30e3\u30f3\u30d7\u30eb\u30fc2016\
   
 基本コンセプトの「参加者のみなさんの時間の使い方に対して極力干渉しない」は継続しており、公式イベントはチェックイン日のウェルカムパーティだけとしましたが、そのパーティーも楽しく盛り上がり、なかなか良かったのではないかと思います。  
 
-[![](../images/thumbnails/blogspot-2016-07-11-hackers-champloo2016-IMG_20160622_182910.jpg)](../images/blogspot-2016-07-11-hackers-champloo2016-IMG_20160622_182910.jpg)
+[![](/images/blogspot/thumbnails/blogspot-2016-07-11-hackers-champloo2016-IMG_20160622_182910.jpg)](/images/blogspot/blogspot-2016-07-11-hackers-champloo2016-IMG_20160622_182910.jpg)
 
   
 海に行きたい方は海に行き、部屋にこもる方はこもり、宿泊者以外で外部からも合宿会場で飲み食いし仕事をし、と様々な時間の使い方をしてもらい、こちらとしても嬉しかったです。  
@@ -26,7 +26,7 @@ title = "\u30cf\u30c3\u30ab\u30fc\u30ba\u30c1\u30e3\u30f3\u30d7\u30eb\u30fc2016\
   
 これはなかなかさじ加減が難しい問題なのですが、例えばホワイトボードに付箋とか、[Trelloのボード](https://trello.com/)のようなもので誰が何をやっているか〜を共有しても良かったかもしれませんね。  
 
-[![](../images/thumbnails/blogspot-2016-07-11-hackers-champloo2016-IMG_20160623_141412.jpg)](../images/blogspot-2016-07-11-hackers-champloo2016-IMG_20160623_141412.jpg)
+[![](/images/blogspot/thumbnails/blogspot-2016-07-11-hackers-champloo2016-IMG_20160623_141412.jpg)](/images/blogspot/blogspot-2016-07-11-hackers-champloo2016-IMG_20160623_141412.jpg)
 
   
 
@@ -42,7 +42,7 @@ title = "\u30cf\u30c3\u30ab\u30fc\u30ba\u30c1\u30e3\u30f3\u30d7\u30eb\u30fc2016\
   
 皆さんがうまい感じでイベントのフォーマットを使って、よりハッカーズチャンプルーを・沖縄を楽しんで頂ければ、と願っております。  
 
-[![](../images/thumbnails/blogspot-2016-07-11-hackers-champloo2016-IMG_20160623_065013.jpg)](../images/blogspot-2016-07-11-hackers-champloo2016-IMG_20160623_065013.jpg)
+[![](/images/blogspot/thumbnails/blogspot-2016-07-11-hackers-champloo2016-IMG_20160623_065013.jpg)](/images/blogspot/blogspot-2016-07-11-hackers-champloo2016-IMG_20160623_065013.jpg)
 
   
 
@@ -55,7 +55,7 @@ title = "\u30cf\u30c3\u30ab\u30fc\u30ba\u30c1\u30e3\u30f3\u30d7\u30eb\u30fc2016\
   
 それはさておき、県内の社会人の方々にも、是非この開発合宿をもっと有効に活用してもらえたらな！と思っております。キッチリ合宿で[新機能を開発しリリースされた実績](https://ja.amimoto-ami.com/2016/07/08/release-amimoto-plugin-dashboard/)もありますし、根を詰めた時間の使い方としてはかなり有意義と思いますので、是非ご検討下さい。  
 
-[![](../images/thumbnails/blogspot-2016-07-11-hackers-champloo2016-IMG_20160624_115557.jpg)](../images/blogspot-2016-07-11-hackers-champloo2016-IMG_20160624_115557.jpg)
+[![](/images/blogspot/thumbnails/blogspot-2016-07-11-hackers-champloo2016-IMG_20160624_115557.jpg)](/images/blogspot/blogspot-2016-07-11-hackers-champloo2016-IMG_20160624_115557.jpg)
 
   
 
@@ -64,7 +64,7 @@ title = "\u30cf\u30c3\u30ab\u30fc\u30ba\u30c1\u30e3\u30f3\u30d7\u30eb\u30fc2016\
 
 これを書くために昨年の「[無事終わりました](http://k-nishijima.blogspot.jp/2015/07/hackers-champloo2015.html)」ブログをざっと読んでみましたが、改善できる点は地味に潰している様子が手に取るように分かり、少し前進した感があって安心しました。  
 
-[![](../images/thumbnails/blogspot-2016-07-11-hackers-champloo2016-IMG_8211.JPG)](../images/blogspot-2016-07-11-hackers-champloo2016-IMG_8211.JPG)
+[![](/images/blogspot/thumbnails/blogspot-2016-07-11-hackers-champloo2016-IMG_8211.JPG)](/images/blogspot/blogspot-2016-07-11-hackers-champloo2016-IMG_8211.JPG)
 
   
 なかなか完璧なイベント運営というのは難しいと思いますが、少しずつ、理想に近づけていけたらなぁと思います。  

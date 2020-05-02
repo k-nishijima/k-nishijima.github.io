@@ -15,7 +15,7 @@ title = "\u30c7\u30b8\u30e9\u30dc\u304a\u304d\u306a\u308f\u7b2c3\u5f3e\u306b\u30
 自分は事前の打ち合わせの認識では、この分野の第一人者[@mgwsuzuki](https://twitter.com/mgwsuzuki)さんのお手伝いで、そこからやりたい人がいたら〜位に考えていましたが、当日蓋を開けてみたらしっかり1つプロジェクトを任されている(^^ゞ
 しかもちょっとチーム編成が特殊で下は小学3年生、上は中学2年生、8人の大所帯になってる！うう～ん。。。  
 
-[![](../images/thumbnails/blogspot-2014-08-18-okidigi3-FILE0017.JPG)](../images/blogspot-2014-08-18-okidigi3-FILE0017.JPG)
+[![](/images/blogspot/thumbnails/blogspot-2014-08-18-okidigi3-FILE0017.JPG)](/images/blogspot/blogspot-2014-08-18-okidigi3-FILE0017.JPG)
 
   
 <span id="more"></span>
@@ -55,7 +55,7 @@ Arduino）とRaspberryPiの通信、上はベクトル演算必要だよね、�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2014-08-18-okidigi3-2014-08-17%2B15.27.52.jpg"><img src="../images/thumbnails/blogspot-2014-08-18-okidigi3-2014-08-17%2B15.27.52.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-08-18-okidigi3-2014-08-17_15.27.52.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-08-18-okidigi3-2014-08-17_15.27.52.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">最終日プレゼンはOISTの講堂</td>
@@ -86,7 +86,7 @@ Arduino）とRaspberryPiの通信、上はベクトル演算必要だよね、�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2014-08-18-okidigi3-10460652_679807158756006_2050932295732492985_o.jpg"><img src="../images/thumbnails/blogspot-2014-08-18-okidigi3-10460652_679807158756006_2050932295732492985_o.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-08-18-okidigi3-10460652_679807158756006_2050932295732492985_o.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-08-18-okidigi3-10460652_679807158756006_2050932295732492985_o.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">（全員居ないけど）彼らの笑顔が素敵です</td>

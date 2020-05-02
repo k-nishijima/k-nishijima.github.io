@@ -11,7 +11,7 @@ title = "2013\u5e74\u3001\u65b0\u3057\u3044\u30b9\u30bf\u30fc\u30c8"
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2013-01-01-2013-2013-01-01+07.40.04.JPG"><img src="../images/thumbnails/blogspot-2013-01-01-2013-2013-01-01+07.40.04.JPG" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2013-01-01-2013-2013-01-01+07.40.04.JPG"><img src="/images/blogspot/thumbnails/blogspot-2013-01-01-2013-2013-01-01+07.40.04.JPG" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">普天間基地から昇る初日の出</td>
@@ -30,7 +30,7 @@ on the Beachやります！！
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2013-01-01-2013-2012-11-17+13.30.43.jpg"><img src="../images/thumbnails/blogspot-2013-01-01-2013-2012-11-17+13.30.43.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2013-01-01-2013-2012-11-17+13.30.43.jpg"><img src="/images/blogspot/thumbnails/blogspot-2013-01-01-2013-2012-11-17+13.30.43.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">第3回JAWS-UG沖縄のヒトコマ</td>
@@ -45,7 +45,7 @@ on the Beachやります！！
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2013-01-01-2013-2012-11-19+16.25.41.JPG"><img src="../images/thumbnails/blogspot-2013-01-01-2013-2012-11-19+16.25.41.JPG" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2013-01-01-2013-2012-11-19+16.25.41.JPG"><img src="/images/blogspot/thumbnails/blogspot-2013-01-01-2013-2012-11-19+16.25.41.JPG" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">2012年11月19日の写真なので、<br />

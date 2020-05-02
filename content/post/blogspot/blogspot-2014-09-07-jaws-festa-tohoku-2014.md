@@ -14,7 +14,7 @@ title = "JAWS Festa Tohoku 2014\u306b\u884c\u3063\u3066\u304d\u307e\u3057\u305f\
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-09-07-jaws-festa-tohoku-2014-2014-09-05%2B17.37.08.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-09-07-jaws-festa-tohoku-2014-2014-09-05%2B17.37.08.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-09-07-jaws-festa-tohoku-2014-2014-09-05_17.37.08.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-09-07-jaws-festa-tohoku-2014-2014-09-05_17.37.08.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">はるばる来たぜ仙台空港！えっ、雨。。。？</td>
@@ -65,7 +65,7 @@ Techがらみで沖縄ともコラボしたいです。
 
 昨晩は体調不良で食べることが出来なかった牛タンを、とうとう食べました！いや〜見事な味付けで美味かったです！  
 
-[![](/images/blogspot/thumbnails/blogspot-2014-09-07-jaws-festa-tohoku-2014-2014-09-06%2B12.35.38.jpg)](/images/blogspot/blogspot-2014-09-07-jaws-festa-tohoku-2014-2014-09-06%2B12.35.38.jpg)
+[![](/images/blogspot/thumbnails/blogspot-2014-09-07-jaws-festa-tohoku-2014-2014-09-06_12.35.38.jpg)](/images/blogspot/blogspot-2014-09-07-jaws-festa-tohoku-2014-2014-09-06_12.35.38.jpg)
 
   
 
@@ -78,7 +78,7 @@ Twilioハンズオン
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-09-07-jaws-festa-tohoku-2014-2014-09-06%2B15.21.24.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-09-07-jaws-festa-tohoku-2014-2014-09-06%2B15.21.24.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-09-07-jaws-festa-tohoku-2014-2014-09-06_15.21.24.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-09-07-jaws-festa-tohoku-2014-2014-09-06_15.21.24.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">終了後に頂きました(^^)</td>
@@ -141,7 +141,7 @@ style="font-size: large;">そんなサムライアーキテクトにAWSを使っ
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-09-07-jaws-festa-tohoku-2014-2014-09-06%2B20.47.18.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-09-07-jaws-festa-tohoku-2014-2014-09-06%2B20.47.18.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-09-07-jaws-festa-tohoku-2014-2014-09-06_20.47.18.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-09-07-jaws-festa-tohoku-2014-2014-09-06_20.47.18.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">パイ食らってもドヤ顔の小賀さんw</td>

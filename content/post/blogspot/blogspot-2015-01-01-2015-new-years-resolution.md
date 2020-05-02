@@ -12,7 +12,7 @@ title = "2015\u5e74\u3001\u65b0\u3057\u3044\u30b9\u30c6\u30c3\u30d7"
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="/images/blogspot/blogspot-2015-01-01-2015-2015-01-01%2B13.09.47.jpg"><img src="/images/blogspot/thumbnails/blogspot-2015-01-01-2015-2015-01-01%2B13.09.47.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2015-01-01-2015-2015-01-01_13.09.47.jpg"><img src="/images/blogspot/thumbnails/blogspot-2015-01-01-2015-2015-01-01_13.09.47.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">波が酷い。。。</td>

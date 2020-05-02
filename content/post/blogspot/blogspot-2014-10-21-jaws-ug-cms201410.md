@@ -79,7 +79,7 @@ Nishijima](https://www.slideshare.net/KoichiroNishijima)**
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-10-21-jaws-ug-cms201410-2014-10-18%2B13.03.49.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-10-21-jaws-ug-cms201410-2014-10-18%2B13.03.49.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-10-21-jaws-ug-cms201410-2014-10-18_13.03.49.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-10-21-jaws-ug-cms201410-2014-10-18_13.03.49.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">大入りです！</td>
@@ -105,7 +105,7 @@ Type/Drupal/WordPressのそれぞれの特徴がよく分かる、素晴らし�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-10-21-jaws-ug-cms201410-10482267_707360989347355_939083578623651473_o%2B(1).jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-10-21-jaws-ug-cms201410-10482267_707360989347355_939083578623651473_o%2B(1).jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-10-21-jaws-ug-cms201410-10482267_707360989347355_939083578623651473_o.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-10-21-jaws-ug-cms201410-10482267_707360989347355_939083578623651473_o.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">いつも忘れる集合写真。<br />

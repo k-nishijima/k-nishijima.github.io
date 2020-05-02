@@ -14,7 +14,7 @@ BEACH、今年も無事開催することが出来ました。今年は史上最
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2015-05-06-cloud-on-the-beach-2015-P1060080.JPG"><img src="../images/thumbnails/blogspot-2015-05-06-cloud-on-the-beach-2015-P1060080.JPG" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2015-05-06-cloud-on-the-beach-2015-P1060080.JPG"><img src="/images/blogspot/thumbnails/blogspot-2015-05-06-cloud-on-the-beach-2015-P1060080.JPG" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">この素敵な案内も毎年ありがとうございます！</td>
@@ -41,7 +41,7 @@ and
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2015-05-06-cloud-on-the-beach-2015-P1060081.JPG"><img src="../images/thumbnails/blogspot-2015-05-06-cloud-on-the-beach-2015-P1060081.JPG" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2015-05-06-cloud-on-the-beach-2015-P1060081.JPG"><img src="/images/blogspot/thumbnails/blogspot-2015-05-06-cloud-on-the-beach-2015-P1060081.JPG" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">ゼネラルトラックの様子。朝イチの小島さんのセッション</td>
@@ -88,7 +88,7 @@ and
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2015-05-06-cloud-on-the-beach-2015-P1060120.JPG"><img src="../images/thumbnails/blogspot-2015-05-06-cloud-on-the-beach-2015-P1060120.JPG" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2015-05-06-cloud-on-the-beach-2015-P1060120.JPG"><img src="/images/blogspot/thumbnails/blogspot-2015-05-06-cloud-on-the-beach-2015-P1060120.JPG" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">本編で挙手して質問できないshy boyやshy girlには<br />
@@ -136,7 +136,7 @@ style="font-size: large;">沖縄県内のエンジニアの皆様にとって、
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2015-05-06-cloud-on-the-beach-2015-P1060172.JPG"><img src="../images/thumbnails/blogspot-2015-05-06-cloud-on-the-beach-2015-P1060172.JPG" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2015-05-06-cloud-on-the-beach-2015-P1060172.JPG"><img src="/images/blogspot/thumbnails/blogspot-2015-05-06-cloud-on-the-beach-2015-P1060172.JPG" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">オマケ：JAWSが上手にSAM'sでジョーズを食べました(^^)</td>

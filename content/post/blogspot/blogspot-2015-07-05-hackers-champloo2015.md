@@ -35,7 +35,7 @@ title = "\u30cf\u30c3\u30ab\u30fc\u30ba\u30c1\u30e3\u30f3\u30d7\u30eb\u30fc2015\
 
 基本コンセプトとして、参加者のみなさんの時間の使い方に対してあまり干渉したくない・自由に時間を使って欲しい、と言うのがあったので、主催側からのイベントは極力少なくしていました。この辺はさじ加減だと思うのですが、「もっと交流イベント的なものがあった方がいい」「自由すぎて何やっていいか分からない」という意見も頂き、なるほどごもっともと思いました。  
 
-[![](../images/thumbnails/blogspot-2015-07-05-hackers-champloo2015-11698731_906180592754401_3699058453674907576_o.jpg)](../images/blogspot-2015-07-05-hackers-champloo2015-11698731_906180592754401_3699058453674907576_o.jpg)
+[![](/images/blogspot/thumbnails/blogspot-2015-07-05-hackers-champloo2015-11698731_906180592754401_3699058453674907576_o.jpg)](/images/blogspot/blogspot-2015-07-05-hackers-champloo2015-11698731_906180592754401_3699058453674907576_o.jpg)
 
   
 実は検討段階では、ある程度大きい会場を借りてその場所で各自が作業できるスペースを提供しようかな、と考えていたのですが、見積をとった結果断念した、という経緯がありました。ハッカソン会場のように1箇所に集まって、でもテーマは全然人によってバラバラ、という形態ですね。もしこれが実現できていたら、もう少し一体感が出ていたかも、分かりませんね。まあいずれにしても部屋の布団で作業する、という方は無くならないかと思いますが(^^ゞ  
@@ -45,7 +45,7 @@ title = "\u30cf\u30c3\u30ab\u30fc\u30ba\u30c1\u30e3\u30f3\u30d7\u30eb\u30fc2015\
 カンファレンスのフォーマットは完成度高くなった
 ==============================================
 
-[![](../images/thumbnails/blogspot-2015-07-05-hackers-champloo2015-FILE0018.png)](../images/blogspot-2015-07-05-hackers-champloo2015-FILE0018.png)
+[![](/images/blogspot/thumbnails/blogspot-2015-07-05-hackers-champloo2015-FILE0018.png)](/images/blogspot/blogspot-2015-07-05-hackers-champloo2015-FILE0018.png)
 
 今年は開発合宿を前半に、最後にカンファレンスを、というフォーマットにしたので、地元勢が発表できる場所が少なくなってしまいました。なので、カンファレンスのゲストセッションの間にLTを挟むという方式をトライしてみたのですが、これはなかなか良かったのではないかと思っています。  
   
@@ -61,7 +61,7 @@ title = "\u30cf\u30c3\u30ab\u30fc\u30ba\u30c1\u30e3\u30f3\u30d7\u30eb\u30fc2015\
 運営のコンセプトとしては、「各自が・可能な範囲で・ベストを尽くす」ことを念頭においていますので、無理やり何かをやれ〜という話には持って行きたくない、と言うのが正直なところです。
 まあただ、「緩くやるためには、締めるところしめないと駄目でしょ？」というお叱りも内部より頂いていますので、これはまたこれで難しいさじ加減です。  
 
-[![](../images/thumbnails/blogspot-2015-07-05-hackers-champloo2015-IMG_9904.JPG)](../images/blogspot-2015-07-05-hackers-champloo2015-IMG_9904.JPG)
+[![](/images/blogspot/thumbnails/blogspot-2015-07-05-hackers-champloo2015-IMG_9904.JPG)](/images/blogspot/blogspot-2015-07-05-hackers-champloo2015-IMG_9904.JPG)
 
   
 もしかしたら、あまり知られていないかもしれないので念のため書いておきますと、ボランティアスタッフのみなさまの働きと、イベントのクオリティ・参加者の満足度は正比例しますので、実はそこが対外的な評価を決定するほぼ全て、なんです（セッションの内容は簡単に飛ぶけど、全体のイメージは後々まで結構印象に残る）。そういう意味では、業務が終わったあとに絞り出した個人の時間を使っての、ボランタリーベースで運営するのは、この辺りが限界、という話なのかもしれませんね。常に改善する余地はあるのでもう少しやれるんじゃないか？とは思うのですが、これはお金があったら解決する、という話でもないので、難しいです。  
@@ -93,7 +93,7 @@ title = "\u30cf\u30c3\u30ab\u30fc\u30ba\u30c1\u30e3\u30f3\u30d7\u30eb\u30fc2015\
   
 特に、今年は昨年の反省を活かして、学生向けの告知に力を入れて動いていただいたので、若い世代へのリーチが改善されたのは非常に良かったと思います。学校単位で開発合宿に殴り込みに来たら、もっとカオスで面白かったかもしれないですね。  
 
-[![](../images/thumbnails/blogspot-2015-07-05-hackers-champloo2015-IMG_9951.JPG)](../images/blogspot-2015-07-05-hackers-champloo2015-IMG_9951.JPG)
+[![](/images/blogspot/thumbnails/blogspot-2015-07-05-hackers-champloo2015-IMG_9951.JPG)](/images/blogspot/blogspot-2015-07-05-hackers-champloo2015-IMG_9951.JPG)
 
 イベントからコミュニティへ
 ==========================
@@ -105,7 +105,7 @@ title = "\u30cf\u30c3\u30ab\u30fc\u30ba\u30c1\u30e3\u30f3\u30d7\u30eb\u30fc2015\
 微力ながら、西島も本当にお互いが切磋琢磨できるコミュニティを作っていきたいと思います。皆様これからもよろしくお願いしますm(\_
 \_)m  
 
-[![](../images/thumbnails/blogspot-2015-07-05-hackers-champloo2015-IMG_0259.JPG)](../images/blogspot-2015-07-05-hackers-champloo2015-IMG_0259.JPG)
+[![](/images/blogspot/thumbnails/blogspot-2015-07-05-hackers-champloo2015-IMG_0259.JPG)](/images/blogspot/blogspot-2015-07-05-hackers-champloo2015-IMG_0259.JPG)
 
 以上、また来年もお会いしましょう！
 ==================================

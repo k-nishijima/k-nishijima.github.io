@@ -16,7 +16,7 @@ title = "\u300c\u6c96\u7e04\u7248\u30af\u30e9\u30a6\u30c9\u3054\u3063\u305f\u716
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2014-02-23-blog-post-2014-02-22+14.34.07.jpg"><img src="../images/thumbnails/blogspot-2014-02-23-blog-post-2014-02-22+14.34.07.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-02-23-blog-post-2014-02-22+14.34.07.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-02-23-blog-post-2014-02-22+14.34.07.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">3面プロジェクタも使える、ステキな会場でした！</td>

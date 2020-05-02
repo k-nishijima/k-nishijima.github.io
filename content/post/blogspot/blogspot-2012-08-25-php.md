@@ -90,7 +90,7 @@ or
 会場で22時まで軽く歓談したあと、引越し作業が終わっていないCAの皆様はオフィスへ（お疲れ様でしたm(\_
 \_)m）、有志は梶山さんを囲んで2次会に流れました。写真ぶれまくってるけどこの1枚で。
 
-[![](../images/thumbnails/blogspot-2012-08-25-php-2012-08-24+22.30.04.jpg)](../images/blogspot-2012-08-25-php-2012-08-24+22.30.04.jpg)
+[![](/images/blogspot/thumbnails/blogspot-2012-08-25-php-2012-08-24+22.30.04.jpg)](/images/blogspot/blogspot-2012-08-25-php-2012-08-24+22.30.04.jpg)
 
   
 
@@ -103,7 +103,7 @@ or
 
 さて、本日8月25日はでかい台風15号が来てますが、25日お昼の段階ではまだ嵐の前の静けさです。明日はとんでもないことになりそう。。。
 
-[![](../images/thumbnails/blogspot-2012-08-25-php-wp16122503.gif)](../images/blogspot-2012-08-25-php-wp16122503.gif)
+[![](/images/blogspot/thumbnails/blogspot-2012-08-25-php-wp16122503.gif)](/images/blogspot/blogspot-2012-08-25-php-wp16122503.gif)
 
   
 

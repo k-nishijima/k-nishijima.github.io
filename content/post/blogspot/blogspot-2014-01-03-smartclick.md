@@ -18,7 +18,7 @@ WebSocketで回答結果をリアルタイムにグラフ表示しよう、と�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2014-01-03-smartclick-2014-01-03+12.21.21.png"><img src="../images/thumbnails/blogspot-2014-01-03-smartclick-2014-01-03+12.21.21.png" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-01-03-smartclick-2014-01-03+12.21.21.png"><img src="/images/blogspot/thumbnails/blogspot-2014-01-03-smartclick-2014-01-03+12.21.21.png" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">投票すると・・・</td>
@@ -31,7 +31,7 @@ WebSocketで回答結果をリアルタイムにグラフ表示しよう、と�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2014-01-03-smartclick-2014-01-03+12.23.33.png"><img src="../images/thumbnails/blogspot-2014-01-03-smartclick-2014-01-03+12.23.33.png" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-01-03-smartclick-2014-01-03+12.23.33.png"><img src="/images/blogspot/thumbnails/blogspot-2014-01-03-smartclick-2014-01-03+12.23.33.png" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">それがリアルタイムに見える！</td>

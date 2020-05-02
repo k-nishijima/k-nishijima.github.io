@@ -31,7 +31,7 @@ Nishijima](https://www.slideshare.net/KoichiroNishijima)**
 自己紹介と今日のやることを簡単に話したあとは、Lambda+APIGatewayで困ってることに関してディスカッションしたり、MFAでハマったことなどを披露したりと、人数が少ないゆえにディープな議論が活発にされています！  
   
 
-[![](../images/thumbnails/blogspot-2017-05-13-jaws-ug-cloud-on-beach-2017-IMG_2525.JPG)](../images/blogspot-2017-05-13-jaws-ug-cloud-on-beach-2017-IMG_2525.JPG)
+[![](/images/blogspot/thumbnails/blogspot-2017-05-13-jaws-ug-cloud-on-beach-2017-IMG_2525.JPG)](/images/blogspot/blogspot-2017-05-13-jaws-ug-cloud-on-beach-2017-IMG_2525.JPG)
 
   
 やっぱこれぐらいでワイワイもくもくやるのもいいですね〜(^^)/

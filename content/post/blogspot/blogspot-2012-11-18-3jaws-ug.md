@@ -12,7 +12,7 @@ title = "\u7b2c3\u56deJAWS-UG\u6c96\u7e04\u52c9\u5f37\u4f1a\u3001\u3084\u308a\u3
 今回、琉球大学さんに会場をご提供頂き、快適な無線LAN＆2面プロジェクターで2トラックのハンズオンを滞り無く実施することが出来ました（[@atsushikinjo](https://twitter.com/atsushikinjo)
 さん、ありがとうございました）。  
 
-[![](../images/thumbnails/blogspot-2012-11-18-3jaws-ug-2012-11-17+13.30.32.jpg)](../images/blogspot-2012-11-18-3jaws-ug-2012-11-17+13.30.32.jpg)
+[![](/images/blogspot/thumbnails/blogspot-2012-11-18-3jaws-ug-2012-11-17+13.30.32.jpg)](/images/blogspot/blogspot-2012-11-18-3jaws-ug-2012-11-17+13.30.32.jpg)
 
   
 　元々講演形式の勉強会（それって誰の勉強会？）が好きじゃないってのもありまして、今回も色々考えた末、ハンズオン＆パネルディスカッションを仕掛けてみました。  
@@ -78,7 +78,7 @@ Nishijima](http://www.slideshare.net/KoichiroNishijima)**
   
 で、終わった後の懇親会はもう疲れて何やらよく覚えてない感じですが、プロジェクタを持ち込んで恒例の居酒屋LTをやりました。  
 
-[![](../images/thumbnails/blogspot-2012-11-18-3jaws-ug-2012-11-17+18.28.57.jpg)](../images/blogspot-2012-11-18-3jaws-ug-2012-11-17+18.28.57.jpg)
+[![](/images/blogspot/thumbnails/blogspot-2012-11-18-3jaws-ug-2012-11-17+18.28.57.jpg)](/images/blogspot/blogspot-2012-11-18-3jaws-ug-2012-11-17+18.28.57.jpg)
 
 事前予約では、参加人数が全然少なくてどうなることかと思いましたが、結局20人を超える皆様に来て頂き、アレとかこれとかココでは言えないディープな話が出来て良かったです。  
 

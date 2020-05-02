@@ -22,7 +22,7 @@ world!」と小島さんがドヤ顔で仰ってましたが、東京だけ2Days
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+10.52.42.JPG"><img src="../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+10.52.42.JPG" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+10.52.42.JPG"><img src="/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+10.52.42.JPG" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">基調講演より<br />
@@ -34,7 +34,7 @@ world!」と小島さんがドヤ顔で仰ってましたが、東京だけ2Days
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+12.23.10.JPG"><img src="../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+12.23.10.JPG" /></a><a href="../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+12.21.56.JPG"><img src="../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+12.21.56.JPG" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+12.23.10.JPG"><img src="/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+12.23.10.JPG" /></a><a href="/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+12.21.56.JPG"><img src="/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+12.21.56.JPG" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">お昼ご馳走様でした。カレー美味かったです！</td>
@@ -45,7 +45,7 @@ world!」と小島さんがドヤ顔で仰ってましたが、東京だけ2Days
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><img src="../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+13.16.41.jpg" /></td>
+<td style="text-align: center;"><img src="/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+13.16.41.jpg" /></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;"><a href="http://www.amazon.co.jp/gp/product/4873115817?ie=UTF8&amp;camp=1207&amp;creative=8411&amp;creativeASIN=4873115817&amp;linkCode=shr&amp;tag=westisland-22&amp;qid=1347754799&amp;ref_=sr_1_1&amp;s=books&amp;sr=1-1">例の本</a>が先行発売＆10%OFF！</td>
@@ -61,7 +61,7 @@ world!」と小島さんがドヤ顔で仰ってましたが、東京だけ2Days
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+14.21.59.JPG"><img src="../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+14.21.59.JPG" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+14.21.59.JPG"><img src="/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+14.21.59.JPG" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">cloudpackの後藤さん（<a href="https://twitter.com/kaz_goto">@kaz_goto</a>）のミニステージに人だかりが</td>
@@ -72,7 +72,7 @@ world!」と小島さんがドヤ顔で仰ってましたが、東京だけ2Days
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+16.19.39.JPG"><img src="../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+16.19.39.JPG" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+16.19.39.JPG"><img src="/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+16.19.39.JPG" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">サーバーワークスの大石さん(<a href="https://twitter.com/ooishi">@ooishi</a>)が人集めすぎて<br />
@@ -84,7 +84,7 @@ world!」と小島さんがドヤ顔で仰ってましたが、東京だけ2Days
 ちなみに、AWSと切腹の相関こんな感じの模様です。大石さんのプレゼンが広く行き渡ることを祈っておりますm(\_
 \_)m  
 
-[![](../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-16+09.27.09.png)](../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-16+09.27.09.png)
+[![](/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-16+09.27.09.png)](/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-16+09.27.09.png)
 
   
   
@@ -92,7 +92,7 @@ world!」と小島さんがドヤ顔で仰ってましたが、東京だけ2Days
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+18.04.48.JPG"><img src="../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+18.04.48.JPG" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+18.04.48.JPG"><img src="/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-13+18.04.48.JPG" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">というわけでDay1終了。<br />
@@ -106,7 +106,7 @@ world!」と小島さんがドヤ顔で仰ってましたが、東京だけ2Days
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+14.25.25.JPG"><img src="../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+14.25.25.JPG" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+14.25.25.JPG"><img src="/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+14.25.25.JPG" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">2日目は所用で午後からの参戦。<br />
@@ -115,7 +115,7 @@ world!」と小島さんがドヤ顔で仰ってましたが、東京だけ2Days
 </tbody>
 </table>
 
-[![](../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+14.25.39.JPG)](../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+14.25.39.JPG)[![](../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+15.13.14.JPG)](../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+15.13.14.JPG)
+[![](/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+14.25.39.JPG)](/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+14.25.39.JPG)[![](/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+15.13.14.JPG)](/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+15.13.14.JPG)
 
 前日の[\#awstokyo](https://twitter.com/i/#!/search/?q=%23awstokyo&src=typd)での電源難民多発の悲鳴を受けて、翌日には充電コーナーを設置するこの機動力！悲鳴を見た僕は「イヤイヤ流石に無理やろ、モバイルバッテリーで何とかしようよ」と思っていたのですが、このあたりが「顧客志向」の最たるものなのかと感動しました。  
   
@@ -123,7 +123,7 @@ world!」と小島さんがドヤ顔で仰ってましたが、東京だけ2Days
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.24.19.JPG"><img src="../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.24.19.JPG" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.24.19.JPG"><img src="/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.24.19.JPG" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">ナイトセッション<br />
@@ -135,7 +135,7 @@ JAWS-UG 東京 in AWS Summit開始前</td>
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.26.32.JPG"><img src="../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.26.32.JPG" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.26.32.JPG"><img src="/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.26.32.JPG" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">なんだかみんなが着てるTシャツが。。。<br />
@@ -147,7 +147,7 @@ JAWS-UG 東京 in AWS Summit開始前</td>
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.30.24.jpg"><img src="../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.30.24.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.30.24.jpg"><img src="/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.30.24.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">JAWS-UGオリジナルTシャツ<br />
@@ -159,7 +159,7 @@ Slide or Die!</td>
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.37.30.JPG"><img src="../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.37.30.JPG" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.37.30.JPG"><img src="/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.37.30.JPG" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">JAWS-UG東京のこの盛り上がりは凄い！<br />
@@ -171,19 +171,19 @@ Slide or Die!</td>
 
 寝てない[エヴァ堀内さん](https://twitter.com/horiuchi)の「んーなんか英語で書いてありますね」でスキップするのも盛り上げの材料にするくらいのJAWS-UG東京！異常なテンションで堀内さんも  
 
-[![](../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-16+10.37.52.png)](../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-16+10.37.52.png)
+[![](/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-16+10.37.52.png)](/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-16+10.37.52.png)
 
   
 ですです(^^)  
   
 
-[![](../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.38.39.JPG)](../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.38.39.JPG)[![](../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.45.03.JPG)](../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.45.03.JPG)
+[![](/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.38.39.JPG)](/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.38.39.JPG)[![](/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.45.03.JPG)](/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.45.03.JPG)
 
 新体制を迎えて、さらなるJAWS-UGの発展を願います！
 
   
 
-[![](../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.52.57.JPG)](../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.52.57.JPG)[![](../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.52.12.JPG)](../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.52.12.JPG)
+[![](/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.52.57.JPG)](/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.52.57.JPG)[![](/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.52.12.JPG)](/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-14+18.52.12.JPG)
 
 支部紹介ってことで、今回ここに集まっていた各支部のコアメンバーの方々が「30秒で！」支部紹介をしました。既に押してる進行が更にグダグダに（笑）  
 沖縄支部のコアメンバーとして、[ほぼこんな感じで](https://docs.google.com/presentation/d/1xeXCVARCXnlxvu0KD2bLSsFfm9wiFPEEgEJgCP7Uzl0/edit)ご紹介してきましたのでご報告します。ロゴは皆さんに「おぉ～！」と受けてましたよ。  
@@ -200,7 +200,7 @@ JAWS-UG沖縄もこんなに盛り上げて行きたいなー、と心に誓っ�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-15+08.27.08.JPG"><img src="../images/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-15+08.27.08.JPG" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-15+08.27.08.JPG"><img src="/images/blogspot/thumbnails/blogspot-2012-09-16-aws-summit-tokyo-2012-2012-09-15+08.27.08.JPG" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">実家のある静岡、富士山を上空からパシャリ</td>

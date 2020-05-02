@@ -47,7 +47,7 @@ Nishijima](http://www.slideshare.net/KoichiroNishijima)**
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2014-04-28-cloud-champloo201404-FILE0047.JPG"><img src="../images/thumbnails/blogspot-2014-04-28-cloud-champloo201404-FILE0047.JPG" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-04-28-cloud-champloo201404-FILE0047.JPG"><img src="/images/blogspot/thumbnails/blogspot-2014-04-28-cloud-champloo201404-FILE0047.JPG" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">後ろに椅子を追加しての大入りでした</td>

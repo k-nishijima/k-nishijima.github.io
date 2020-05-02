@@ -14,7 +14,7 @@ atnd登録したその日に注文して、ほとんど未開封のArduinoとワ
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2013-05-05-de-1-arduinojava-2013-05-03+13.16.20.jpg"><img src="../images/thumbnails/blogspot-2013-05-05-de-1-arduinojava-2013-05-03+13.16.20.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2013-05-05-de-1-arduinojava-2013-05-03+13.16.20.jpg"><img src="/images/blogspot/thumbnails/blogspot-2013-05-05-de-1-arduinojava-2013-05-03+13.16.20.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">MG Waveさんに集結した大きな子供達</td>
@@ -33,7 +33,7 @@ atnd登録したその日に注文して、ほとんど未開封のArduinoとワ
 <span id="more"></span>  
   
 
-[![](../images/thumbnails/blogspot-2013-05-05-de-1-arduinojava-2013-05-05+12.36.33.JPG)](../images/blogspot-2013-05-05-de-1-arduinojava-2013-05-05+12.36.33.JPG)[![](../images/thumbnails/blogspot-2013-05-05-de-1-arduinojava-2013-05-05+12.49.03.JPG)](../images/blogspot-2013-05-05-de-1-arduinojava-2013-05-05+12.49.03.JPG)
+[![](/images/blogspot/thumbnails/blogspot-2013-05-05-de-1-arduinojava-2013-05-05+12.36.33.JPG)](/images/blogspot/blogspot-2013-05-05-de-1-arduinojava-2013-05-05+12.36.33.JPG)[![](/images/blogspot/thumbnails/blogspot-2013-05-05-de-1-arduinojava-2013-05-05+12.49.03.JPG)](/images/blogspot/blogspot-2013-05-05-de-1-arduinojava-2013-05-05+12.49.03.JPG)
 
   
 驚きですよ、なんせこれですからね。僕が今お借りしているのはNo.3のナンバリングがされてるものです。鈴木さんがご自分で設計＆制作された基板の上に、赤外線入出力と、ボタン2個、おまけに光学センサー付きの憎いやつ。裏側の回路とハンダ付けの精細さがプロの仕事を物語っております。で、これを制御する6種類のコマンドを含んだスケッチもありますよ〜というお膳立て。ここまでの用意があれば、[PPM](http://en.wikipedia.org/wiki/Pulse-position_modulation)ってなに？(

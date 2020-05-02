@@ -20,7 +20,7 @@ style="color: #d9d2e9;">（周りには何もありませんでしたが）</spa
   
 会場内では大きい会議室にこんな感じにこじんまりとやっておりました。特にBGM的なものもなく、各自モクモクです。  
 
-[![](../images/thumbnails/blogspot-2012-07-01-4-2012-07-01+13.13.34.jpg)](../images/blogspot-2012-07-01-4-2012-07-01+13.13.34.jpg)
+[![](/images/blogspot/thumbnails/blogspot-2012-07-01-4-2012-07-01+13.13.34.jpg)](/images/blogspot/blogspot-2012-07-01-4-2012-07-01+13.13.34.jpg)
 
   
 で、今回のお題は、自分の戦前の予想通り、Ruby on

@@ -45,7 +45,7 @@ DAYSの翌日でしたが、今年は会場都合で前日になってしまい�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="/images/blogspot/blogspot-2015-03-23-jaws-days-2015-2015-03-21%2B14.13.46.jpg"><img src="/images/blogspot/thumbnails/blogspot-2015-03-23-jaws-days-2015-2015-03-21%2B14.13.46.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2015-03-23-jaws-days-2015-2015-03-21_14.13.46.jpg"><img src="/images/blogspot/thumbnails/blogspot-2015-03-23-jaws-days-2015-2015-03-21_14.13.46.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">目黒の総本山にて開催</td>
@@ -93,7 +93,7 @@ Nishijima](https://www.slideshare.net/KoichiroNishijima)**
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="/images/blogspot/blogspot-2015-03-23-jaws-days-2015-2015-03-22%2B20.13.10.jpg"><img src="/images/blogspot/thumbnails/blogspot-2015-03-23-jaws-days-2015-2015-03-22%2B20.13.10.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2015-03-23-jaws-days-2015-2015-03-22_20.13.10.jpg"><img src="/images/blogspot/thumbnails/blogspot-2015-03-23-jaws-days-2015-2015-03-22_20.13.10.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">ぶっ続けのLTでカオスw</td>

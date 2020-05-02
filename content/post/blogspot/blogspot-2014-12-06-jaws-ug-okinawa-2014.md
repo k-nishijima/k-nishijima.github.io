@@ -28,7 +28,7 @@ Gwaveインキュベート](http://www.gbic.jp/incubate/)様をお貸し頂き�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-01-13%2B18.44.24.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-01-13%2B18.44.24.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-01-13_18.44.24.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-01-13_18.44.24.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">終わったあとの、会場でケータリングしての懇談会</td>
@@ -49,7 +49,7 @@ Gwaveインキュベート](http://www.gbic.jp/incubate/)様をお貸し頂き�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-02-08%2B15.05.21.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-02-08%2B15.05.21.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-02-08_15.05.21.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-02-08_15.05.21.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">お菓子とかステッカーとか一杯</td>
@@ -71,7 +71,7 @@ BEACH](http://k-nishijima.blogspot.jp/2014/04/cloud-on-the-beach-2014.html)で�
 
 さて、来年はどうなるかなぁ・・・！？  
 
-[![](/images/blogspot/thumbnails/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-04-26%2B15.32.54.jpg)](/images/blogspot/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-04-26%2B15.32.54.jpg)
+[![](/images/blogspot/thumbnails/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-04-26_15.32.54.jpg)](/images/blogspot/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-04-26_15.32.54.jpg)
 
 ### JAWS-UG沖縄 AWSハンズオン/もくもく勉強会 2014年5月 2014-05-17（土）
 
@@ -80,7 +80,7 @@ BEACH](http://k-nishijima.blogspot.jp/2014/04/cloud-on-the-beach-2014.html)で�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-05-17%2B15.19.18.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-05-17%2B15.19.18.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-05-17_15.19.18.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-05-17_15.19.18.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">銘菓がいっぱい！</td>
@@ -129,7 +129,7 @@ JAZUG仙台】として各地をハングアウトで繋いで、LTしあった�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-08-09%2B17.11.53.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-08-09%2B17.11.53.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-08-09_17.11.53.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-08-09_17.11.53.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">もくもくの成果をLT中！</td>
@@ -155,7 +155,7 @@ AngularJS
 
 ここで恐らく今年最後のビーチパーティーをしました。いい日だった！  
 
-[![](/images/blogspot/thumbnails/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-10-18%2B18.11.02.jpg)](/images/blogspot/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-10-18%2B18.11.02.jpg)
+[![](/images/blogspot/thumbnails/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-10-18_18.11.02.jpg)](/images/blogspot/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-10-18_18.11.02.jpg)
 
   
 で、11月頭にはre:Inventに行けないウサを晴らすべく、[AWS Cloud Roadshow
@@ -180,7 +180,7 @@ AngularJS
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-11-29%2B12.46.10.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-11-29%2B12.46.10.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-11-29_12.46.10.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-12-06-jaws-ug-okinawa-2014-2014-11-29_12.46.10.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">現地調達のお土産の数々</td>

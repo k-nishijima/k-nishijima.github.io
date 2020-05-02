@@ -12,7 +12,7 @@ title = "2017\u5e74\u3001\u4eca\u5e74\u306f\u3069\u3093\u306a\u5e74\u306b\u3057\
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2017-01-01-eip-IMG_1896.JPG"><img src="../images/thumbnails/blogspot-2017-01-01-eip-IMG_1896.JPG" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2017-01-01-eip-IMG_1896.JPG"><img src="/images/blogspot/thumbnails/blogspot-2017-01-01-eip-IMG_1896.JPG" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">初日の出（と言うには相当上がっていますが）</td>
@@ -32,7 +32,7 @@ title = "2017\u5e74\u3001\u4eca\u5e74\u306f\u3069\u3093\u306a\u5e74\u306b\u3057\
 [AWS re:Invent](https://www.r3it.com/blog/aws/reinvent2016-report1/)
 のためにラスベガスまで行くことが出来ました。  
 
-[![](../images/thumbnails/blogspot-2017-01-01-eip-IMG_1216-EFFECTS.jpg)](../images/blogspot-2017-01-01-eip-IMG_1216-EFFECTS.jpg)
+[![](/images/blogspot/thumbnails/blogspot-2017-01-01-eip-IMG_1216-EFFECTS.jpg)](/images/blogspot/blogspot-2017-01-01-eip-IMG_1216-EFFECTS.jpg)
 
   
 ラスベガス土産でインフルエンザになったこと以外は、どの旅行も楽しみました。やっぱり旅はいいですね。普段の生活では得られない刺激が色々とあります。今年も継続して、また色々な所に行く予定です。  
@@ -47,7 +47,7 @@ title = "2017\u5e74\u3001\u4eca\u5e74\u306f\u3069\u3093\u306a\u5e74\u306b\u3057\
   
 自分で海中をナビゲーションしてそこにいる生物と触れ合う（触りませんが！撮るのは写真だけ）・海を楽しむ醍醐味は、なかなか他では味わえない楽しさです。  
 
-[![](../images/thumbnails/blogspot-2017-01-01-eip-goby.png)](../images/blogspot-2017-01-01-eip-goby.png)
+[![](/images/blogspot/thumbnails/blogspot-2017-01-01-eip-goby.png)](/images/blogspot/blogspot-2017-01-01-eip-goby.png)
 
   
 
@@ -75,7 +75,7 @@ DAYS 2016
   
 （余談ですが何だか近年、色んなイベントの「日付を早く決めろ」と、下手すると1年前から言われているので一体何屋なんだ感があります…この辺も早いタイミングで次に繋ぎたいですね(^^ゞ  
 
-[![](../images/thumbnails/blogspot-2017-01-01-eip-IMG_20160621_054716.jpg)](../images/blogspot-2017-01-01-eip-IMG_20160621_054716.jpg)
+[![](/images/blogspot/thumbnails/blogspot-2017-01-01-eip-IMG_20160621_054716.jpg)](/images/blogspot/blogspot-2017-01-01-eip-IMG_20160621_054716.jpg)
 
   
 

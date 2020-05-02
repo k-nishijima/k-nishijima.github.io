@@ -49,7 +49,7 @@ Nishijima](http://www.slideshare.net/KoichiroNishijima)
   
 夜の部の本編(!?)では、飲み屋さんにプロジェクターを持ち込みマイク無しでプレゼンするというエンジニア忘年会スタイル。これ、やったことない人には分からんかと思いますが、実は最高に楽しいです！  
 
-[![](../images/thumbnails/blogspot-2012-03-04-extreme-hago-3-2012-03-03+19.30.18.jpg)](../images/blogspot-2012-03-04-extreme-hago-3-2012-03-03+19.30.18.jpg)[![](../images/thumbnails/blogspot-2012-03-04-extreme-hago-3-2012-03-03+22.04.16.jpg)](../images/blogspot-2012-03-04-extreme-hago-3-2012-03-03+22.04.16.jpg)
+[![](/images/blogspot/thumbnails/blogspot-2012-03-04-extreme-hago-3-2012-03-03+19.30.18.jpg)](/images/blogspot/blogspot-2012-03-04-extreme-hago-3-2012-03-03+19.30.18.jpg)[![](/images/blogspot/thumbnails/blogspot-2012-03-04-extreme-hago-3-2012-03-03+22.04.16.jpg)](/images/blogspot/blogspot-2012-03-04-extreme-hago-3-2012-03-03+22.04.16.jpg)
 
   
   

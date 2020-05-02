@@ -35,7 +35,7 @@ DAYS
 </colgroup>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2014-03-23-jaws-days-2014-1980212_800043363357288_1629011402_o.jpg"><img src="../images/thumbnails/blogspot-2014-03-23-jaws-days-2014-1980212_800043363357288_1629011402_o.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-03-23-jaws-days-2014-1980212_800043363357288_1629011402_o.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-03-23-jaws-days-2014-1980212_800043363357288_1629011402_o.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;"><div style="font-size: medium; text-align: start;">
@@ -57,7 +57,7 @@ DAYS
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2014-03-23-jaws-days-2014-2014-03-15+14.05.28.jpg"><img src="../images/thumbnails/blogspot-2014-03-23-jaws-days-2014-2014-03-15+14.05.28.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-03-23-jaws-days-2014-2014-03-15+14.05.28.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-03-23-jaws-days-2014-2014-03-15+14.05.28.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;"><span style="font-size: small; text-align: start;">見てくださいこの大入り！</span></td>
@@ -71,7 +71,7 @@ DAYS
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2014-03-23-jaws-days-2014-2014-03-15+15.26.29.jpg"><img src="../images/thumbnails/blogspot-2014-03-23-jaws-days-2014-2014-03-15+15.26.29.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-03-23-jaws-days-2014-2014-03-15+15.26.29.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-03-23-jaws-days-2014-2014-03-15+15.26.29.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;"><span style="font-size: small; text-align: start;">ぽか～ん。。。</span></td>
@@ -84,7 +84,7 @@ DAYS
   
 投票画面側はこんな。  
 
-[![](../images/thumbnails/blogspot-2014-03-23-jaws-days-2014-2014-03-23+09.57.11.png)](../images/blogspot-2014-03-23-jaws-days-2014-2014-03-23+09.57.11.png)
+[![](/images/blogspot/thumbnails/blogspot-2014-03-23-jaws-days-2014-2014-03-23+09.57.11.png)](/images/blogspot/blogspot-2014-03-23-jaws-days-2014-2014-03-23+09.57.11.png)
 
   
 賑やかしの画面側はこんなんでした。動画でどうぞ。誰かが投票すると、その投票内容が流れて、「わっしょい！」するとJAWS-UG沖縄のロゴが爆発する仕組みです。  
@@ -169,7 +169,7 @@ DAYS
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2014-03-23-jaws-days-2014-969867_10152251263054641_1813583548_n.jpg"><img src="../images/thumbnails/blogspot-2014-03-23-jaws-days-2014-969867_10152251263054641_1813583548_n.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2014-03-23-jaws-days-2014-969867_10152251263054641_1813583548_n.jpg"><img src="/images/blogspot/thumbnails/blogspot-2014-03-23-jaws-days-2014-969867_10152251263054641_1813583548_n.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">ミクとサムライ</td>

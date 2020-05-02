@@ -9,7 +9,7 @@ title = "\u3053\u3093\u306b\u3061\u306f Jolicloud\uff01"
 
   
 
-[![](../images/thumbnails/blogspot-2009-12-05-jolicloud-Screenshot.png)](../images/blogspot-2009-12-05-jolicloud-Screenshot.png)  
+[![](/images/blogspot/thumbnails/blogspot-2009-12-05-jolicloud-Screenshot.png)](/images/blogspot/blogspot-2009-12-05-jolicloud-Screenshot.png)  
 
   
 USBメモリから起動するモードでとりあえず手持ちのアスワンで動くかテストしてみました。結果

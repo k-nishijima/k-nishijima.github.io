@@ -23,7 +23,7 @@ BEACH!](http://atnd.org/events/26790)」という勉強会＋ビーチパーテ�
 オリジナルのロゴは [@Sapphirus](https://twitter.com/#!/Sapphirus)
 さん作成の  
 
-[![](../images/thumbnails/blogspot-2012-04-04-jaws-ug-thumb-base.png)](../images/blogspot-2012-04-04-jaws-ug-thumb-base.png)
+[![](/images/blogspot/thumbnails/blogspot-2012-04-04-jaws-ug-thumb-base.png)](/images/blogspot/blogspot-2012-04-04-jaws-ug-thumb-base.png)
 
   
   
@@ -33,7 +33,7 @@ BEACH!](http://atnd.org/events/26790)」という勉強会＋ビーチパーテ�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2012-04-04-jaws-ug-thumb-hamamatsu.png"><img src="../images/thumbnails/blogspot-2012-04-04-jaws-ug-thumb-hamamatsu.png" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2012-04-04-jaws-ug-thumb-hamamatsu.png"><img src="/images/blogspot/thumbnails/blogspot-2012-04-04-jaws-ug-thumb-hamamatsu.png" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;"><span style="font-size: small;">「う、うなぎ！？」</span></td>
@@ -48,7 +48,7 @@ BEACH!](http://atnd.org/events/26790)」という勉強会＋ビーチパーテ�
   
 （※追記：クラウド女子会だとこんなかんじですね。）  
 
-[![](../images/thumbnails/blogspot-2012-04-04-jaws-ug-cloudgirl.jpg)](../images/blogspot-2012-04-04-jaws-ug-cloudgirl.jpg)
+[![](/images/blogspot/thumbnails/blogspot-2012-04-04-jaws-ug-cloudgirl.jpg)](/images/blogspot/blogspot-2012-04-04-jaws-ug-cloudgirl.jpg)
 
   
 元データとしては、イラストレーターCS5 のデータと EPS

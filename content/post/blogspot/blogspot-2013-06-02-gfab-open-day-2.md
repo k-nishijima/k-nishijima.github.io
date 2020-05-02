@@ -42,7 +42,7 @@ Mac環境でbmp形式への出力をサポートしている画像取扱ソフ�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2013-06-02-gfab-open-day-2-dogs.jpg"><img src="../images/thumbnails/blogspot-2013-06-02-gfab-open-day-2-dogs.jpg" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2013-06-02-gfab-open-day-2-dogs.jpg"><img src="/images/blogspot/thumbnails/blogspot-2013-06-02-gfab-open-day-2-dogs.jpg" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">この写真が...</td>
@@ -55,7 +55,7 @@ Mac環境でbmp形式への出力をサポートしている画像取扱ソフ�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2013-06-02-gfab-open-day-2-dogs.png"><img src="../images/thumbnails/blogspot-2013-06-02-gfab-open-day-2-dogs.png" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2013-06-02-gfab-open-day-2-dogs.png"><img src="/images/blogspot/thumbnails/blogspot-2013-06-02-gfab-open-day-2-dogs.png" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">こんな感じになる（実際には全部ベジェ）</td>
@@ -80,7 +80,7 @@ Macで画像を編集するツールは色々あるかと思いますが、お�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2013-06-02-gfab-open-day-2-sarah.png"><img src="../images/thumbnails/blogspot-2013-06-02-gfab-open-day-2-sarah.png" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2013-06-02-gfab-open-day-2-sarah.png"><img src="/images/blogspot/thumbnails/blogspot-2013-06-02-gfab-open-day-2-sarah.png" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">元画像をザックリ切り抜いたものを...</td>
@@ -91,7 +91,7 @@ Macで画像を編集するツールは色々あるかと思いますが、お�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2013-06-02-gfab-open-day-2-sarah-pos.png"><img src="../images/thumbnails/blogspot-2013-06-02-gfab-open-day-2-sarah-pos.png" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2013-06-02-gfab-open-day-2-sarah-pos.png"><img src="/images/blogspot/thumbnails/blogspot-2013-06-02-gfab-open-day-2-sarah-pos.png" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">ポスタライズして...</td>
@@ -102,7 +102,7 @@ Macで画像を編集するツールは色々あるかと思いますが、お�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2013-06-02-gfab-open-day-2-sarah-line.png"><img src="../images/thumbnails/blogspot-2013-06-02-gfab-open-day-2-sarah-line.png" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2013-06-02-gfab-open-day-2-sarah-line.png"><img src="/images/blogspot/thumbnails/blogspot-2013-06-02-gfab-open-day-2-sarah-line.png" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">輪郭抽出してみましたが...</td>

@@ -34,7 +34,7 @@ Java開発者にとってみると、ざっくり「稼働中のJVMに繋いで�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2013-05-22-javajmx-1-2013-05-22+21.37.38.png"><img src="../images/thumbnails/blogspot-2013-05-22-javajmx-1-2013-05-22+21.37.38.png" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2013-05-22-javajmx-1-2013-05-22+21.37.38.png"><img src="/images/blogspot/thumbnails/blogspot-2013-05-22-javajmx-1-2013-05-22+21.37.38.png" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">jconsole を起動してプロセスに接続するとJVMの内部状態が見える</td>
@@ -45,7 +45,7 @@ Java開発者にとってみると、ざっくり「稼働中のJVMに繋いで�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2013-05-22-javajmx-1-2013-05-22+21.38.23.png"><img src="../images/thumbnails/blogspot-2013-05-22-javajmx-1-2013-05-22+21.38.23.png" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2013-05-22-javajmx-1-2013-05-22+21.38.23.png"><img src="/images/blogspot/thumbnails/blogspot-2013-05-22-javajmx-1-2013-05-22+21.38.23.png" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">JMX経由で取得した値。これはRuntimeを表示した例</td>
@@ -61,7 +61,7 @@ Java開発者にとってみると、ざっくり「稼働中のJVMに繋いで�
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><a href="../images/blogspot-2013-05-22-javajmx-1-2013-05-22+21.45.17.png"><img src="../images/thumbnails/blogspot-2013-05-22-javajmx-1-2013-05-22+21.45.17.png" /></a></td>
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2013-05-22-javajmx-1-2013-05-22+21.45.17.png"><img src="/images/blogspot/thumbnails/blogspot-2013-05-22-javajmx-1-2013-05-22+21.45.17.png" /></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">作為的すぎてスンマセン。アクティブセッションが1です</td>
