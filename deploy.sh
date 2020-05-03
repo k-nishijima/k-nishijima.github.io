@@ -2,11 +2,11 @@
 
 cd `dirname $0`
 \rm -rf docs/*
-
 hugo
 
-
+git add *
 git commit -a -m "deploy `date +"%Y%m%d%H%M%S"`"
+
 git push origin source
 # git subtree push --prefix docs/ origin master --force
 
