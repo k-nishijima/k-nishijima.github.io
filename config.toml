@@ -4,7 +4,7 @@ publishDir = "docs"
 
 baseurl = "/"
 title = "Archived my historic blog"
-paginate = "20" # Number of posts per page
+paginate = "15" # Number of posts per page
 theme = "mainroad"
 disqusShortname = "" # Enable Disqus comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
@@ -44,7 +44,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   single = "right" # Configure layout for single pages
   # Enable widgets in given order
   # widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
-  widgets = ["recent", "taglist", "archives", "social"]
+  widgets = ["about", "recent", "taglist", "archives", "social"]
 
 [Params.widgets]
   recent_num = 5 # Set the number of articles in the "Recent articles" widget
