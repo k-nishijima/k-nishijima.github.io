@@ -3,8 +3,8 @@ publishDir = "docs"
 
 
 baseurl = "/"
-title = "Mainroad"
-paginate = "10" # Number of posts per page
+title = "Archived my historic blog"
+paginate = "20" # Number of posts per page
 theme = "mainroad"
 disqusShortname = "" # Enable Disqus comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
@@ -18,13 +18,13 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   avatar = "img/avatar.png"
 
 [Params]
-  subtitle = "Just another site" # Subtitle of your site. Used in site header
+  subtitle = "" # Subtitle of your site. Used in site header
   description = "John Doe's Personal blog about everything" # Site description. Used in meta description
-  copyright = "John Doe" # Footer copyright holder, otherwise will use site title
+  copyright = "Koichiro Nishijima" # Footer copyright holder, otherwise will use site title
   opengraph = true # Enable OpenGraph if true
   twitter_cards = true # Enable Twitter Cards if true
   readmore = true # Show "Read more" button in list if true
-  authorbox = false # Show authorbox at bottom of pages if true
+  authorbox = true # Show authorbox at bottom of pages if true
   toc = true # Enable Table of Contents
   pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
   post_meta = ["date", "categories", "translations"] # Order of post meta information
@@ -34,8 +34,9 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path
   mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
   highlightColor = "#e22d30" # Override highlight color
-  customCSS = ["css/custom.css"] # Include custom CSS files
-  customJS = ["js/custom.js"] # Include custom JS files
+  customCSS = ["/css/custom.css"] # Include custom CSS files
+#  customJS = ["js/custom.js"] # Include custom JS files
+  customJS = [] # Include custom JS files
 
 [Params.sidebar]
   home = "right" # Configure layout for home page
@@ -63,9 +64,9 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
 # Custom social links
 
-[[Params.widgets.social.custom]]
-  title = "My Blog Archive"
-  url = "https://k-nishijima.github.io"
+#[[Params.widgets.social.custom]]
+#  title = "My Blog Archive"
+#  url = "https://k-nishijima.github.io"
 
 
 [markup.goldmark.renderer]
