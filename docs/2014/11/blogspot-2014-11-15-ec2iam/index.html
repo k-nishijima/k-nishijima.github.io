@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>指定のEC2インスタンスタイプしか起動できないIAMユーザーを作成する - Archived my historic blog</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<meta property="og:title" content="指定のEC2インスタンスタイプしか起動できないIAMユーザーを作成する" />
+<meta property="og:description" content="これはクラスメソッドさんのDevelopers.IOに投稿されている（いつもお世話になっております！）「特定インスタンスタイプのEC2インスタンスが起動できないIAMユーザーを作成する」の対となるべく書いたポストです。
+どうでも良い付帯情報が多数書かれておりますので、キモだけ知りたい方は下の方へどうぞ。
+事の始まり 今年のJAWS-UG沖縄で恒例のサムライチケットを利用した「アカウント渡すから自由に使っていいよ〜」という自由なハンズオン（過去のイベントはこの辺から見られます）は、IAMユーザを配布しているのですが、毎回ほぼフル権限で渡しています。
+これは、何も考えずに渡しているわけではなくて、権限を制限して「なんかこれが出来ないんですケド」という質問や無駄な弊害を無くすべく、意識してやっていました。
+で、事件は起こります(^^ゞ
+2014年10月に開催したCMS祭りというイベントで、いつもの様にIAMアカウントを配布して網元AMIでWordPressを起動しよう〜！というハンズオンを実施したのですが、その際に・・・。
+ おい、ハンズオンで網元をhi1.4xlarge立ち上げたの誰やねん(;_;) Marketplace Chargesはサムライチケット対象外だから、 Hiromichi Koga さんに自腹で50ドル以上献上しました(;_;) 痛い勉強代になりました。。。orz
+— 西島 幸一郎 (@k_nishijima) 2014, 10月 19
+ ということで、翌日インスタンスを停止するクリーニング作業をするまで、AWS Marketplace Charges として$68.45がぶっ飛びました（笑）。
+デジタルキューブの小賀さんにご報告したところ、どうもこれはMarketplace経由で選択した時のバグっぽい仕様な感じでしたが、まあ確認画面でインスタンスサイズは出ているので、これは文句を言っても仕方ないことですね。。。
+（おそらくインスタンスって何？というかたが、そのままポチポチやったんじゃないかと想像してます）
+で、まあ仕方ないので次からはインスタンスのサイズを限定したIAMユーザを渡そう、と思い至り、上記の福田さんのポストを参考にこんなポリシーを書きました。
+{ &quot;Version&quot;: &quot;2012-10-17&quot;, &quot;Statement&quot;: [ { &quot;Sid&quot;: &quot;Stmt1413712254000&quot;, &quot;Effect&quot;: &quot;Deny&quot;, &quot;Action&quot;: [ &quot;ec2:RunInstances&quot; ], &quot;Condition&quot;: { &quot;StringNotEquals&quot;: { &quot;ec2:InstanceType&quot;: [ &quot;t1.micro&quot;, &quot;t2.micro&quot; ] } }, &quot;Resource&quot;: [ &quot;*&quot; ] } ] }  ポイントはStringNotEqualsでして、プログラマーなら誰しも思うであろう、StringEqualsで「起動できるインスタンスを指定する」のではなくて、StringNotEqualsで「これ以外は起動しちゃやだ」という指定をしたい、というわけですね。
+しかし動かない・・・！？ これで万事オッケ〜、Simulate Policyでテストしても問題ないよ！と浮かれていたのですが、実際にこのポリシーを適用したユーザでインスタンスを起動しようとすると、謎のエラーで起動できない・・・ナゼorz
+どう頑張っても駄目だったので、AWS Support (Business) に加入して質問を投げてみました（実はこれもまた一悶着あるのですが（汗）。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://k-nishijima.github.io/2014/11/blogspot-2014-11-15-ec2iam/" />
+<meta property="article:published_time" content="2014-11-15T19:32:00+09:00" />
+<meta property="article:modified_time" content="2014-11-15T19:32:00+09:00" />
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="指定のEC2インスタンスタイプしか起動できないIAMユーザーを作成する"/>
+<meta name="twitter:description" content="これはクラスメソッドさんのDevelopers.IOに投稿されている（いつもお世話になっております！）「特定インスタンスタイプのEC2インスタンスが起動できないIAMユーザーを作成する」の対となるべく書いたポストです。
+どうでも良い付帯情報が多数書かれておりますので、キモだけ知りたい方は下の方へどうぞ。
+事の始まり 今年のJAWS-UG沖縄で恒例のサムライチケットを利用した「アカウント渡すから自由に使っていいよ〜」という自由なハンズオン（過去のイベントはこの辺から見られます）は、IAMユーザを配布しているのですが、毎回ほぼフル権限で渡しています。
+これは、何も考えずに渡しているわけではなくて、権限を制限して「なんかこれが出来ないんですケド」という質問や無駄な弊害を無くすべく、意識してやっていました。
+で、事件は起こります(^^ゞ
+2014年10月に開催したCMS祭りというイベントで、いつもの様にIAMアカウントを配布して網元AMIでWordPressを起動しよう〜！というハンズオンを実施したのですが、その際に・・・。
+ おい、ハンズオンで網元をhi1.4xlarge立ち上げたの誰やねん(;_;) Marketplace Chargesはサムライチケット対象外だから、 Hiromichi Koga さんに自腹で50ドル以上献上しました(;_;) 痛い勉強代になりました。。。orz
+— 西島 幸一郎 (@k_nishijima) 2014, 10月 19
+ ということで、翌日インスタンスを停止するクリーニング作業をするまで、AWS Marketplace Charges として$68.45がぶっ飛びました（笑）。
+デジタルキューブの小賀さんにご報告したところ、どうもこれはMarketplace経由で選択した時のバグっぽい仕様な感じでしたが、まあ確認画面でインスタンスサイズは出ているので、これは文句を言っても仕方ないことですね。。。
+（おそらくインスタンスって何？というかたが、そのままポチポチやったんじゃないかと想像してます）
+で、まあ仕方ないので次からはインスタンスのサイズを限定したIAMユーザを渡そう、と思い至り、上記の福田さんのポストを参考にこんなポリシーを書きました。
+{ &quot;Version&quot;: &quot;2012-10-17&quot;, &quot;Statement&quot;: [ { &quot;Sid&quot;: &quot;Stmt1413712254000&quot;, &quot;Effect&quot;: &quot;Deny&quot;, &quot;Action&quot;: [ &quot;ec2:RunInstances&quot; ], &quot;Condition&quot;: { &quot;StringNotEquals&quot;: { &quot;ec2:InstanceType&quot;: [ &quot;t1.micro&quot;, &quot;t2.micro&quot; ] } }, &quot;Resource&quot;: [ &quot;*&quot; ] } ] }  ポイントはStringNotEqualsでして、プログラマーなら誰しも思うであろう、StringEqualsで「起動できるインスタンスを指定する」のではなくて、StringNotEqualsで「これ以外は起動しちゃやだ」という指定をしたい、というわけですね。
+しかし動かない・・・！？ これで万事オッケ〜、Simulate Policyでテストしても問題ないよ！と浮かれていたのですが、実際にこのポリシーを適用したユーザでインスタンスを起動しようとすると、謎のエラーで起動できない・・・ナゼorz
+どう頑張っても駄目だったので、AWS Support (Business) に加入して質問を投げてみました（実はこれもまた一悶着あるのですが（汗）。"/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Archived my historic blog" rel="home">
+				<div class="logo__title">Archived my historic blog</div>
+				
+			</a>
+		</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">指定のEC2インスタンスタイプしか起動できないIAMユーザーを作成する</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2014-11-15T19:32:00&#43;09:00">2014-11-15</time></div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p>これはクラスメソッドさんのDevelopers.IOに投稿されている（いつもお世話になっております！）「<a href="http://dev.classmethod.jp/cloud/ec2_restricted_runinstances/">特定インスタンスタイプのEC2インスタンスが起動できないIAMユーザーを作成する</a>」の対となるべく書いたポストです。</p>
+<p>どうでも良い付帯情報が多数書かれておりますので、キモだけ知りたい方は下の方へどうぞ。</p>
+<h2 id="span-idmorespan事の始まり"><span id="more"></span>事の始まり</h2>
+<p>今年のJAWS-UG沖縄で恒例のサムライチケットを利用した「アカウント渡すから自由に使っていいよ〜」という自由なハンズオン（<a href="http://jaws-ug-okinawa.doorkeeper.jp/events">過去のイベントはこの辺から見られます</a>）は、IAMユーザを配布しているのですが、毎回ほぼフル権限で渡しています。</p>
+<p>これは、何も考えずに渡しているわけではなくて、権限を制限して「なんかこれが出来ないんですケド」という質問や無駄な弊害を無くすべく、意識してやっていました。</p>
+<p>で、事件は起こります(^^ゞ</p>
+<p><a href="http://k-nishijima.blogspot.jp/2014/10/jaws-ug-cms201410.html">2014年10月に開催したCMS祭り</a>というイベントで、いつもの様にIAMアカウントを配布して網元AMIでWordPressを起動しよう〜！というハンズオンを実施したのですが、その際に・・・。</p>
+<blockquote>
+<p>おい、ハンズオンで網元をhi1.4xlarge立ち上げたの誰やねん(;_;)
+Marketplace Chargesはサムライチケット対象外だから、 Hiromichi Koga
+さんに自腹で50ドル以上献上しました(;_;)
+痛い勉強代になりました。。。orz<br>
+— 西島 幸一郎 (@k_nishijima) <a href="https://twitter.com/k_nishijima/status/523749295196213248">2014, 10月
+19</a></p>
+</blockquote>
+<p>ということで、翌日インスタンスを停止するクリーニング作業をするまで、AWS
+Marketplace Charges として$68.45がぶっ飛びました（笑）。</p>
+<p>デジタルキューブの小賀さんにご報告したところ、<a href="https://www.facebook.com/nishijima.koichiro/posts/10153273163340031?pnref=story">どうもこれはMarketplace経由で選択した時のバグっぽい仕様</a>な感じでしたが、まあ確認画面でインスタンスサイズは出ているので、これは文句を言っても仕方ないことですね。。。<br>
+（おそらくインスタンスって何？というかたが、そのままポチポチやったんじゃないかと想像してます）</p>
+<p>で、まあ仕方ないので次からはインスタンスのサイズを限定したIAMユーザを渡そう、と思い至り、上記の福田さんのポストを参考にこんなポリシーを書きました。</p>
+<pre><code>{
+  &quot;Version&quot;: &quot;2012-10-17&quot;,
+  &quot;Statement&quot;: [
+    {
+      &quot;Sid&quot;: &quot;Stmt1413712254000&quot;,
+      &quot;Effect&quot;: &quot;Deny&quot;,
+      &quot;Action&quot;: [
+        &quot;ec2:RunInstances&quot;
+      ],
+      &quot;Condition&quot;: {
+        &quot;StringNotEquals&quot;: {
+          &quot;ec2:InstanceType&quot;: [
+            &quot;t1.micro&quot;,
+            &quot;t2.micro&quot;
+          ]
+        }
+      },
+      &quot;Resource&quot;: [
+          &quot;*&quot;
+      ]
+    }
+  ]
+}
+</code></pre>
+<p>ポイントはStringNotEqualsでして、プログラマーなら誰しも思うであろう、StringEqualsで「起動できるインスタンスを指定する」のではなくて、StringNotEqualsで「これ以外は起動しちゃやだ」という指定をしたい、というわけですね。</p>
+<h2 id="しかし動かない">しかし動かない・・・！？</h2>
+<p>これで万事オッケ〜、Simulate
+Policyでテストしても問題ないよ！と浮かれていたのですが、実際にこのポリシーを適用したユーザでインスタンスを起動しようとすると、謎のエラーで起動できない・・・ナゼorz</p>
+<p>どう頑張っても駄目だったので、<a href="https://aws.amazon.com/jp/premiumsupport/">AWS Support
+(Business)</a>
+に加入して質問を投げてみました（実はこれもまた一悶着あるのですが（汗）。</p>
+<p>AWSのビジネスサポートは初期応答1時間以内で、かなり優秀という印象を持っていました。実ビジネスでAWSを利用するには加入必須のサービスと思われます。<br>
+で、その優秀なサポートさんに今まであれこれ質問してきたわけですが、、、、実は解決に至るまでに、今までで一番時間がかかったケースになりました（笑）。</p>
+<p>1週間位掛かって解決した結論としては、、、</p>
+<h2 id="runinstances-するときにはresource-設定しないと駄目だよ">RunInstances するときにはResource 設定しないと駄目だよ！</h2>
+<p>とのことでした・・・。あ、この件は公開してもいいという許可は取ってありますのでご安心を。</p>
+<blockquote>
+<p>詳細は以下の<br>
+&ldquo;Supported Resource-Level Permissions for Amazon EC2 API
+Actions&quot;のRunInstancesの項目を参照してください。 </p>
+</blockquote>
+<blockquote>
+<p><a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-iam-actions-resources.html">http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-iam-actions-resources.html</a></p>
+</blockquote>
+<p>というわけで、正しいポリシーの設定は</p>
+<pre><code>{
+  &quot;Version&quot;: &quot;2012-10-17&quot;,
+  &quot;Statement&quot;: [
+    {
+      &quot;Sid&quot;: &quot;Stmt1413712254000&quot;,
+      &quot;Effect&quot;: &quot;Deny&quot;,
+      &quot;Action&quot;: [
+        &quot;ec2:RunInstances&quot;
+      ],
+      &quot;Condition&quot;: {
+        &quot;StringNotEquals&quot;: {
+          &quot;ec2:InstanceType&quot;: [
+            &quot;t1.micro&quot;,
+            &quot;t2.micro&quot;
+          ]
+        }
+      },
+      &quot;Resource&quot;: [
+          &quot;arn:aws:ec2:*:アカウント番号:instance/*&quot;
+      ]
+    }
+  ]
+}
+</code></pre>
+<p>となります。</p>
+<h2 id="オマケクレジットのサポート日割り料金未適用について">オマケ：クレジットのサポート日割り料金未適用について</h2>
+<p>で、この質問をするのにJAWS-UG沖縄としてビジネスサポートに入ったわけですが（そもそもIAMに関する質問はビジネスサポート以上からしか出来ない）、初月は日割りでコストを請求されます。</p>
+<p>西島の持っているAWSサムライ2014のクレジット適用範囲にはビジネスサポートも含まれていたので、普通にさくっと契約してしまったのですが・・・</p>
+<p><span style="font-size: large;">うおぉこれもAWS Service Charges
+で請求が来てる！！</span></p>
+<p>この現象もよく分からなかったのでサポートに問い合わせたのですが、</p>
+<blockquote>
+<p><span
+style="background-color: white; color: #222222; font-family: arial, sans-serif; font-size: 14px;">大変わかりづらくなっており、誠に恐縮ですが、</span><br>
+<span
+style="background-color: white; color: #222222; font-family: arial, sans-serif; font-size: 14px;">サービス加入時に発生いたします料金は、前払い金にあたるため、</span><br>
+<span class="il"
+style="background: rgb(255, 255, 204); color: #222222; font-family: arial, sans-serif; font-size: 14px;">AWS</span><span
+style="background-color: white; color: #222222; font-family: arial, sans-serif; font-size: 14px;">プロモーションクレジットの対象外となります。</span></p>
+</blockquote>
+<p>という良く分からない日本語でご回答頂き、「まあいいからとにかく払えや」とのことでした・・・（涙）。<br>
+というわけで日割りの$41.94をガッツリ請求されましたとさ。。。</p>
+<h2 id="でお伺いを立てました">で、お伺いを立てました</h2>
+<p>このままひとり爆死するのはネタとしては面白いのですが、これで一円も懐にはいらない自分としては<span
+style="font-size: large;">どうにも悔しいでは無いですか</span>。ということでクレジットカード会社からの請求金額確定を待って、JAWS-UG沖縄のコアメンバーの皆様にお伺いを立てました。</p>
+<blockquote>
+<p>請求金額<br>
+AWS Support(Business) $41.94 * 107.86円 = 4,524円<br>
+AWS Marketplace Charges $68.45 * 114.50 = 7,838円<br>
+計12,362円</p>
+</blockquote>
+<p>結果、全会一致で「許してやろう」というお言葉を頂き、端数は面倒なので1万2千円をプール金より出金させて頂きました。</p>
+<p>JAWS-UG沖縄にご参加いただき、お気持ちをくださった皆様、スポンサーの皆様により救われました。ありがとうございましたm(_
+_)m</p>
+<p>（収支表は収支の動きがあった際に、集計して<a href="https://www.facebook.com/groups/jawsug.okinawa/">Facebookグループのほう</a>にポストしています）</p>
+<p>では最後にこの言葉で締めさせていただこうかと思います。</p>
+<h4 id="この記事により多くの無駄な血が流れなくなることを祈っております">この記事により多くの無駄な血が流れなくなることを祈っております。</h4>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/study-group/" rel="tag">study-group</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/aws/" rel="tag">aws</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/2014/10/blogspot-2014-10-21-jaws-ug-cms201410/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">JAWS-UG沖縄 CMS祭り 無事終了！</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/2014/12/blogspot-2014-12-06-jaws-ug-okinawa-2014/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">2014年のJAWS-UG沖縄まとめ</p>
+		</a>
+	</div>
+</nav>
+
+
+
+			</div>
+			<aside class="sidebar">
+
+<div class="widget-recent widget">
+	<h4 class="widget__title">about</h4>
+	<div class="widget__content about_widget">
+      <a class="widget__link" href="/about/">About me and this site</a></li>
+
+    </div>
+        <a class="twitter-timeline" data-width="300" data-height="500" href="https://twitter.com/k_nishijima?ref_src=twsrc%5Etfw">Tweets by k_nishijima</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        
+</div>
+
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+              <time class="meta__text" datetime="2017-10-14T12:10:00&#43;09:00">2017-10-14</time>
+              <a class="widget__link" href="/2017/10/blogspot-2017-10-14-medium/">ブログをMediumに引っ越しました</a></li>
+			<li class="widget__item">
+              <time class="meta__text" datetime="2017-07-01T17:21:00&#43;09:00">2017-07-01</time>
+              <a class="widget__link" href="/2017/07/blogspot-2017-07-01-hackers-champloo2017/">ハッカーズチャンプルー2017、今年も無事終わりました</a></li>
+			<li class="widget__item">
+              <time class="meta__text" datetime="2017-05-13T14:24:00&#43;09:00">2017-05-13</time>
+              <a class="widget__link" href="/2017/05/blogspot-2017-05-13-jaws-ug-cloud-on-beach-2017/">JAWS-UG沖縄 Cloud on the BEACH 2017 今年もいい天気でした！</a></li>
+			<li class="widget__item">
+              <time class="meta__text" datetime="2017-01-01T17:33:00&#43;09:00">2017-01-01</time>
+              <a class="widget__link" href="/2017/01/blogspot-2017-01-01-eip/">2017年、今年はどんな年にしますか</a></li>
+			<li class="widget__item">
+              <time class="meta__text" datetime="2016-07-11T22:55:00&#43;09:00">2016-07-11</time>
+              <a class="widget__link" href="/2016/07/blogspot-2016-07-11-hackers-champloo2016/">ハッカーズチャンプルー2016、無事終わりました</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/arduino/" title="arduino">arduino (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/as1410/" title="as1410">as1410 (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/aws/" title="aws">aws (29)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cassandra/" title="cassandra">cassandra (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/desire/" title="desire">desire (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/golang/" title="golang">golang (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hackers-champloo/" title="hackers-champloo">hackers-champloo (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/java/" title="java">java (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mac/" title="mac">mac (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/remote-work/" title="remote-work">remote-work (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/scala/" title="scala">scala (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/study-group/" title="study-group">study-group (42)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tightbell/" title="tightbell">tightbell (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ubuntu/" title="ubuntu">ubuntu (9)</a>
+	</div>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Archives</h4>
+	<div class="widget__content">
+      
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2020">2020</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2017">2017</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2016">2016</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2015">2015</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2014">2014</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2013">2013</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2012">2012</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2011">2011</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2010">2010</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2009">2009</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2008">2008</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2006">2006</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2005">2005</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2004">2004</a>
+        
+	</div>
+</div>
+
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Facebook" rel="noopener noreferrer" href="https://facebook.com/nishijima.koichiro" target="_blank">
+				<svg class="widget-social__link-icon icon icon-facebook" width="24" height="24" viewBox="0 0 352 352"><path d="m0 32v288c0 17.5 14.5 32 32 32h288c17.5 0 32-14.5 32-32v-288c0-17.5-14.5-32-32-32h-288c-17.5 0-32 14.5-32 32zm320 0v288h-83v-108h41.5l6-48h-47.5v-31c0-14 3.5-23.5 23.5-23.5h26v-43.5c-4.4-.6-19.8-1.5-37.5-1.5-36.9 0-62 22.2-62 63.5v36h-42v48h42v108h-155v-288z"/></svg>
+				<span>Facebook</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/k_nishijima" target="_blank">
+				<svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
+				<span>Twitter</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/k-nishijima" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+
+		
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Koichiro Nishijima.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

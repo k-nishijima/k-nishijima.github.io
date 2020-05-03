@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>scala on Archived my historic blog</title>
+    <link>https://k-nishijima.github.io/tags/scala/</link>
+    <description>Recent content in scala on Archived my historic blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 21 Apr 2012 10:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://k-nishijima.github.io/tags/scala/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>atnd2twitter.scala 書いたけど消したよ</title>
+      <link>https://k-nishijima.github.io/2012/04/blogspot-2012-04-21-atnd2twitterscala/</link>
+      <pubDate>Sat, 21 Apr 2012 10:30:00 +0900</pubDate>
+      
+      <guid>https://k-nishijima.github.io/2012/04/blogspot-2012-04-21-atnd2twitterscala/</guid>
+      <description>宣誓：Java大好きっ子Scala初心者です（キリッ
+atndのイベント参加者をいじいじするスクリプトといえば @nefo_mi さんのあれがありますが、そう、御多分に洩れずRubyなのです。
+gem installしてもJSONがねぇぞごらとか怒られる、うわぁなにこれみたいな処理系は僕はどうも苦手なので、、、試しにscalaで書いてみました。
+ ※注意：別にLL言語をDISる訳じゃなくて、処理系とかライブラリとかのバージョンがOS紐付きな処理系は苦手なのです。コードのライフタイムが長いものを書いたとき、「OSが新しくなったからPython2.7だよ」っと言われてコードを修正するのが嫌なのです。。。それならJVMをレガシーから最新まで複数バージョン入れられて、依存ライブラリもJar単位できっちり完璧に管理できるJavaのほうがが精神衛生上、楽なのです。
+ で、結果こんな感じになりました。
+ イベントIDを指定して、未フォローの人をフォローするだけの簡単なお仕事  。。。と思ったのですが、以下、4月22日修正：
+TwitterおよびTwitter4Jの中の人である@yusukeyさんより指摘があり、Twitterのポリシーである自動化に関するルールと留意点に反してるとのことでしたので、githubからも削除しました。
+なるほど、確かにAPIの使い方はスパマーのそれと変わらんのですね。残念。。。</description>
+    </item>
+    
+    <item>
+      <title>Scala Hack-a-thon #2 に行ってきました＆LTで話してきました</title>
+      <link>https://k-nishijima.github.io/2010/02/blogspot-2010-02-21-scala-hack-thon-2-lt/</link>
+      <pubDate>Sun, 21 Feb 2010 13:51:00 +0900</pubDate>
+      
+      <guid>https://k-nishijima.github.io/2010/02/blogspot-2010-02-21-scala-hack-thon-2-lt/</guid>
+      <description>昨日になりますが、@yuroyoroさん主催の2月20日に行われたScala Hack-a-thon #2 に行ってきました！
+ http://d.hatena.ne.jp/yuroyoro/20100219/1266581453 #scalahackのまとめはこちらです  会場を提供していただいた日本オラクル様に感謝です！部屋までの誘導はちと考える必要がありましたが、椅子は座りやすいし、ドリンクサーバもあるし、最強のファシリティです!!!ありがとうございました！
+今後も勉強会などに積極的に場所を提供していきたいとのことですので、場所に困ったことがあったら相談に乗ってくれると思います。
+さて、発火村の内容はといいますと、午前中は yuroyoroさんがScala hack-a-thon #1の資料を使っての解説、午後もみんなで沈黙大会。。。じゃなくて各自黙々とscalaの(?)コーディングと相成りました。
+んで、僕は何をしていたかというと、初めてのScalaの題材何にしよう？と思ったんですが、yuroyoroさんの資料とコップ本を片手にTermtterみたいなのをScalaでやってました。
+具体的にはtwitterのタイムラインを取ってきて、XMLをパースして、libnotifyに投げる、っていうのを作ってました。LTの寸前にやっと動きましたのでもうちょっと整理したらまた公開します。
+コレクションの操作が全く良くわからんので、沈黙を破りyuroyoroさんに色々と質問してしまいました。Scala難しい。。。習うより慣れろでいっぱい書くしかないですね。
+ところで、libnotifyってのは、Macで言うところのgrawlみたいなものです。Windowsにも同じようなのはあると思うんですが良くわかりません。。。
+$ sudo apt-get install libnotify-bin
+でインストールしておくと、
+$ notify-send &amp;ldquo;hello&amp;rdquo;
+で notifyのダイアログが出せるんですが、これをScalaでやりたかったわけです。ついでに言うと、間に合えばこれを出しっぱなしにしてLTやりたかったんですが。。。残念。この試みはまた今度と言うことで。
+ libnotifyのJavaバインディングはこちら http://java-gnome.sourceforge.net/ growlはたぶん http://growl.info/documentation/developer/　この辺からJavaSupportが落とせるかなと思います（まだ見ていません）  夕方、途中から突然上がったブラインド越しに美しい夜景を見ながら、LTでちょっと喋ってきました。以下に資料を張っておきます。
+本当は、この後GAEの本番にデプロイしてっていうデモをするつもりだったんですが、なんと自分のUbuntuがプロジェクターにつながらず（汗）。結局上の資料をPDFにしてyuroyoroさんのMacを借りてプレゼンしました。いやーホント焦りました。お陰で(?)プレゼンも緊張してしまいなに喋ってるか良くわからなかったかもしれません、ゴメンナサイ。。。
+この後、19時からの懇親会では色々とディープな話を伺えて楽しかったです。yuroyoroさんをはじめ、参加者の皆様、ありがとうございましたー！</description>
+    </item>
+    
+  </channel>
+</rss>
