@@ -13,3 +13,13 @@
     color: white;
     text-transform: none;
 }
+
+.archived_comment {
+    font-size: smaller;
+    background-color: #c7c7c72e;
+    padding: 10px 5px 15px 15px;
+}
+
+.archived_comment_username {
+    font-weight: bold;
+}
