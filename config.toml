@@ -7,7 +7,7 @@ title = "Archived my historic blog"
 paginate = "15" # Number of posts per page
 theme = "mainroad"
 disqusShortname = "" # Enable Disqus comments by entering your Disqus shortname
-googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+googleAnalytics = "UA-11952919-2" # Enable Google Analytics by entering your tracking id
 
 [permalinks]
     post = "/:year/:month/:filename"
