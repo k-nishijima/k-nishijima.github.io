@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>arduino on Archived my historic blog</title>
+    <link>https://k-nishijima.github.io/tags/arduino/</link>
+    <description>Recent content in arduino on Archived my historic blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 02 Jun 2013 22:17:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://k-nishijima.github.io/tags/arduino/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>gFab Open Day &#43; モノビジ部 #2に行ってきた</title>
+      <link>https://k-nishijima.github.io/2013/06/blogspot-2013-06-02-gfab-open-day-2/</link>
+      <pubDate>Sun, 02 Jun 2013 22:17:00 +0900</pubDate>
+      
+      <guid>https://k-nishijima.github.io/2013/06/blogspot-2013-06-02-gfab-open-day-2/</guid>
+      <description>さて、今日はgFab Open Day + モノビジ部 #2に行って来ましたよ。今回もMG Wave様にてお世話になりました。モノdeサバイ部から名前は変わりましたが第2回です。あ、すみません、写真が一枚もないので様子はハッシュタグ#monobu2あたりでご確認下さい。
+さて、今回はもくもく会が基本だったので、自分もアレコレ横道にそれつつもくもくしてました。
+何をしていたか？ 最後の振り返りの時に告知しかしなかったので、今日は何をやっていたのかを報告します。一応、赤外線リモコンヘリで遊んでた！ってだけじゃないのです(^^ゞ
+取り敢えず、僕もカッティングプロッタを使いたかったので、元データをいかに手抜きをして作るか？ということに情熱を燃やしておりました。以下色々やったことメモ。
+上手いことすればPotraceで写真の輪郭が取れるかもしれない と思いまして、Potraceを試してみました。このツールは昔で言うところのAdobe Streamlineともいうべきツールで、色んなOSに対応しているラスタ→ベクタ変換ツールです。こいつはかなりイケてる！と思ったのですが、入力ファイルがBMP形式しかサポートしていませんでした。ナニソレここはMacな世界。。。
+ということでimagemagickの出番 Mac環境でbmp形式への出力をサポートしている画像取扱ソフトが案外無いのは驚きました。プレビューとかで簡単に書き出せるのかな？と思いきや駄目で、他の手持ちのフリーソフトでもなかなかサポートしているものがありませんでした。
+結局、Unix環境での画像処理では伝家の宝刀、imagemagickさんにご登場頂きました。
+brew install imagemagick  でインストールは完了、pngからbmpへの変換は
+convert dogs.png bmp3:dogs.bmp  てな感じで。
+そしてPotraceの実力は如何に ようやく作ったbmpファイルを使ってptraceをかけると、こんな感じになります。
+    この写真が...        こんな感じになる（実際には全部ベジェ）    これはこれで凄く劇的な感じではありますが。。。これではあまりにこまかすぎそのままカッティングプロッタには流せません。
+困って別なツールに手を出す 絵心のある方なら、こんなことする前に写真からラインをトレースして、良い感じのデザインを創るのだと思いますが、自分はそんな能力がないので、ツールの力で何とかすべくもうちょっとあがいてみました。
+ToyViewerでなんとかする Macで画像を編集するツールは色々あるかと思いますが、お手軽で目的に叶いそうなToyViewerというツールを発見しました。これはなかなか良く出来ています。
+これを使って、元画像をポスタライズした上で輪郭抽出したら何とかならんかな？と思ってやってみたのですが&amp;hellip;
+    元画像をザックリ切り抜いたものを...        ポスタライズして...        輪郭抽出してみましたが.</description>
+    </item>
+    
+    <item>
+      <title>モノdeサバイ部 #1に行って来ました / ArduinoとJavaの素敵な関係</title>
+      <link>https://k-nishijima.github.io/2013/05/blogspot-2013-05-05-de-1-arduinojava/</link>
+      <pubDate>Sun, 05 May 2013 18:00:00 +0900</pubDate>
+      
+      <guid>https://k-nishijima.github.io/2013/05/blogspot-2013-05-05-de-1-arduinojava/</guid>
+      <description>atnd登録したその日に注文して、ほとんど未開封のArduinoとワクドキの心をセットにして、5月3日に行われたモノdeサバイ部 #1に行って来ましたよ！
+ハッシュタグは #monobu1 、USTも最後の成果発表だけはしてたっぽいですがURLは不明です。。
+    MG Waveさんに集結した大きな子供達    詳細はatndを見てもらうと分かるんですが、この勉強会はArduino+Rubyでなんかやろうぜワークショップ、だと信じていたのですが、それは化けの皮で実体は
+@mgwsuzukiさんが特製shield
+作ってくれたから、
+これでお前らハッカソンしろ！
+というワンダーランドでございました。
+
+
+驚きですよ、なんせこれですからね。僕が今お借りしているのはNo.3のナンバリングがされてるものです。鈴木さんがご自分で設計＆制作された基板の上に、赤外線入出力と、ボタン2個、おまけに光学センサー付きの憎いやつ。裏側の回路とハンダ付けの精細さがプロの仕事を物語っております。で、これを制御する6種類のコマンドを含んだスケッチもありますよ〜というお膳立て。ここまでの用意があれば、PPMってなに？( ﾟдﾟ)ﾎﾟｶｰﾝ　な自分でも前半の講義を聞いてちょっと頑張ればナニモノカが出来る、という完璧な準備でした。オーガナイズしてくださった宮里さん＆鈴木さん、本当にありがとうございましたm(_ _)m
+機材の関係もありペアプロで、ということで僕は @sleepycat_zzzさんとペアになりました。いやー、おいらペアプロやったことなかったのでゴメンナサイ。なんか、どうやればいいのか全く分からず、各自モクモクな流れになっちゃいました。。
+何をやっていたかというと まず二人でPPMの勉強からはじめました。自宅から持ってきたリモコンのデータの解析は機器の都合上鈴木さんがやってくださったので、それを見ながらパルスをダンプしたものを解析して、16進数でどう表されているか？というデコードの部分をお勉強。赤外線受光部に向けて、リモコンのボタンを押すとパルスのOnOffのマイクロ秒がダンプが取れるので、それをこんな感じでメモってみて、あーこういうコードを送ってるのね、というのをまず理解しました。アナログな入出力でデジタル信号を送ってるのがオモシレーって話ですね。それを元にデコーダを書こうかなと思ったのですが、僕は(rubyで書くの面倒いという理由だけで)断念し、結局これを@sleepycat_zzzさんがあとでモクモクの時にチャレンジしていた模様です。
+その後、何をやろうか二人で一致した目的を相談することもなく(^^ゞ、だらっと各自モクモクし始めました。@sleepycat_zzzさんは前述のデコーダの部分をRubyで、僕はシリアル制御のためのREST APIを書きたかったので、JavaでArduinoを制御するのを試し始めました。ええ、書き間違いではないです。「Ruby x Arduino ワークショップ」に来ているにもかかわらず、Javaで書いてます:)
+以下MacのJDK1.6or1.7で動かすまでのメモです。 Javaでシリアル通信するために、RXTXというライブラリをこちらから落として入れておいて下さい。READMEにあるように、jarとjnilibを/Library/Java/Extensions/を入れればいいのですが、どうやら64bitOSだとjnilibがうまく動かないっぽいので、こちらにあるファイルで上書きしちゃいました。この辺りはこちらのブログを参考にさせて頂きました。
+Eclipseで、mavenプロジェクトでやるのであれば、pom.xmlのdependenciesに
+ &amp;lt;dependency&amp;gt; &amp;lt;groupid&amp;gt;org.rxtx&amp;lt;/groupid&amp;gt; &amp;lt;artifactid&amp;gt;rxtx&amp;lt;/artifactid&amp;gt; &amp;lt;version&amp;gt;2.1.7&amp;lt;/version&amp;gt; &amp;lt;/pre&amp;gt;  を追加すればgnu.io.*クラス群を使ってコンパイルは出来るはずなのですが、この状態であんまり見たことのない「アクセス制限: 型 SerialPort は必須ライブラリー /Library/Java/Extensions/RXTXcomm.jar で制限されているためアクセスできません」とかいうエラーが出て来ました。
+これはこちらのブログでご指摘のとおり、ビルド・パスの構成 → ライブラリータブのJREシステム・ライブラリーのアクセスルールを編集 → 追加で、「gnu/**」を「アクセス許可」、などとすると上手くビルドできるようになると思います。
+Javaでシリアル通信 で、いくつかチョロチョロとシリアル通信のサンプルプログラムを書いて見たところ、上手く動いているようです。やったね。
+1回シリアルポートにつながれば、後は普通のストリームのプログラミングなので、例えばIRTXコマンドを書き込むならこんな感じで渡せます。
+ out.write(&amp;quot;RTX&amp;quot;.getBytes(&amp;quot;ISO-8859-1&amp;quot;)); out.flush();  （改行コードの有無とか、文字エンコーディングとか、毎回flushするのかしないのかなどモロモロ試行錯誤したのは省きます）
+JavaでRESTサーバを書く 本当は、実験がてらNinja web frameworkで書こうと思ったのですが、何故かmvn archetype:generate が上手く動いてくれず断念しましたorz
+代わりにJAX-RSでチョロチョロっとアノテーションを書いて、サーバはもちろんjettyを使ってRESTサーバを仕立てて、あるURLを叩くとLEDランプが付く！というところまで何とか滑りこみで成果発表に間に合わせることができました。これを公開すれば誰かがURLを叩くたびにLEDチカチカ完成！</description>
+    </item>
+    
+  </channel>
+</rss>

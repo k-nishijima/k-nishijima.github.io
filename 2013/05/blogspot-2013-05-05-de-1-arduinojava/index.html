@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>モノdeサバイ部 #1に行って来ました / ArduinoとJavaの素敵な関係 - Archived my historic blog</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<meta property="og:title" content="モノdeサバイ部 #1に行って来ました / ArduinoとJavaの素敵な関係" />
+<meta property="og:description" content="atnd登録したその日に注文して、ほとんど未開封のArduinoとワクドキの心をセットにして、5月3日に行われたモノdeサバイ部 #1に行って来ましたよ！
+ハッシュタグは #monobu1 、USTも最後の成果発表だけはしてたっぽいですがURLは不明です。。
+    MG Waveさんに集結した大きな子供達    詳細はatndを見てもらうと分かるんですが、この勉強会はArduino&#43;Rubyでなんかやろうぜワークショップ、だと信じていたのですが、それは化けの皮で実体は
+@mgwsuzukiさんが特製shield
+作ってくれたから、
+これでお前らハッカソンしろ！
+というワンダーランドでございました。
+
+
+驚きですよ、なんせこれですからね。僕が今お借りしているのはNo.3のナンバリングがされてるものです。鈴木さんがご自分で設計＆制作された基板の上に、赤外線入出力と、ボタン2個、おまけに光学センサー付きの憎いやつ。裏側の回路とハンダ付けの精細さがプロの仕事を物語っております。で、これを制御する6種類のコマンドを含んだスケッチもありますよ〜というお膳立て。ここまでの用意があれば、PPMってなに？( ﾟдﾟ)ﾎﾟｶｰﾝ　な自分でも前半の講義を聞いてちょっと頑張ればナニモノカが出来る、という完璧な準備でした。オーガナイズしてくださった宮里さん＆鈴木さん、本当にありがとうございましたm(_ _)m
+機材の関係もありペアプロで、ということで僕は @sleepycat_zzzさんとペアになりました。いやー、おいらペアプロやったことなかったのでゴメンナサイ。なんか、どうやればいいのか全く分からず、各自モクモクな流れになっちゃいました。。
+何をやっていたかというと まず二人でPPMの勉強からはじめました。自宅から持ってきたリモコンのデータの解析は機器の都合上鈴木さんがやってくださったので、それを見ながらパルスをダンプしたものを解析して、16進数でどう表されているか？というデコードの部分をお勉強。赤外線受光部に向けて、リモコンのボタンを押すとパルスのOnOffのマイクロ秒がダンプが取れるので、それをこんな感じでメモってみて、あーこういうコードを送ってるのね、というのをまず理解しました。アナログな入出力でデジタル信号を送ってるのがオモシレーって話ですね。それを元にデコーダを書こうかなと思ったのですが、僕は(rubyで書くの面倒いという理由だけで)断念し、結局これを@sleepycat_zzzさんがあとでモクモクの時にチャレンジしていた模様です。
+その後、何をやろうか二人で一致した目的を相談することもなく(^^ゞ、だらっと各自モクモクし始めました。@sleepycat_zzzさんは前述のデコーダの部分をRubyで、僕はシリアル制御のためのREST APIを書きたかったので、JavaでArduinoを制御するのを試し始めました。ええ、書き間違いではないです。「Ruby x Arduino ワークショップ」に来ているにもかかわらず、Javaで書いてます:)
+以下MacのJDK1.6or1.7で動かすまでのメモです。 Javaでシリアル通信するために、RXTXというライブラリをこちらから落として入れておいて下さい。READMEにあるように、jarとjnilibを/Library/Java/Extensions/を入れればいいのですが、どうやら64bitOSだとjnilibがうまく動かないっぽいので、こちらにあるファイルで上書きしちゃいました。この辺りはこちらのブログを参考にさせて頂きました。
+Eclipseで、mavenプロジェクトでやるのであれば、pom.xmlのdependenciesに
+ &lt;dependency&gt; &lt;groupid&gt;org.rxtx&lt;/groupid&gt; &lt;artifactid&gt;rxtx&lt;/artifactid&gt; &lt;version&gt;2.1.7&lt;/version&gt; &lt;/pre&gt;  を追加すればgnu.io.*クラス群を使ってコンパイルは出来るはずなのですが、この状態であんまり見たことのない「アクセス制限: 型 SerialPort は必須ライブラリー /Library/Java/Extensions/RXTXcomm.jar で制限されているためアクセスできません」とかいうエラーが出て来ました。
+これはこちらのブログでご指摘のとおり、ビルド・パスの構成 → ライブラリータブのJREシステム・ライブラリーのアクセスルールを編集 → 追加で、「gnu/**」を「アクセス許可」、などとすると上手くビルドできるようになると思います。
+Javaでシリアル通信 で、いくつかチョロチョロとシリアル通信のサンプルプログラムを書いて見たところ、上手く動いているようです。やったね。
+1回シリアルポートにつながれば、後は普通のストリームのプログラミングなので、例えばIRTXコマンドを書き込むならこんな感じで渡せます。
+ out.write(&quot;RTX&quot;.getBytes(&quot;ISO-8859-1&quot;)); out.flush();  （改行コードの有無とか、文字エンコーディングとか、毎回flushするのかしないのかなどモロモロ試行錯誤したのは省きます）
+JavaでRESTサーバを書く 本当は、実験がてらNinja web frameworkで書こうと思ったのですが、何故かmvn archetype:generate が上手く動いてくれず断念しましたorz
+代わりにJAX-RSでチョロチョロっとアノテーションを書いて、サーバはもちろんjettyを使ってRESTサーバを仕立てて、あるURLを叩くとLEDランプが付く！というところまで何とか滑りこみで成果発表に間に合わせることができました。これを公開すれば誰かがURLを叩くたびにLEDチカチカ完成！" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://k-nishijima.github.io/2013/05/blogspot-2013-05-05-de-1-arduinojava/" />
+<meta property="article:published_time" content="2013-05-05T18:00:00+09:00" />
+<meta property="article:modified_time" content="2013-05-05T18:00:00+09:00" />
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="モノdeサバイ部 #1に行って来ました / ArduinoとJavaの素敵な関係"/>
+<meta name="twitter:description" content="atnd登録したその日に注文して、ほとんど未開封のArduinoとワクドキの心をセットにして、5月3日に行われたモノdeサバイ部 #1に行って来ましたよ！
+ハッシュタグは #monobu1 、USTも最後の成果発表だけはしてたっぽいですがURLは不明です。。
+    MG Waveさんに集結した大きな子供達    詳細はatndを見てもらうと分かるんですが、この勉強会はArduino&#43;Rubyでなんかやろうぜワークショップ、だと信じていたのですが、それは化けの皮で実体は
+@mgwsuzukiさんが特製shield
+作ってくれたから、
+これでお前らハッカソンしろ！
+というワンダーランドでございました。
+
+
+驚きですよ、なんせこれですからね。僕が今お借りしているのはNo.3のナンバリングがされてるものです。鈴木さんがご自分で設計＆制作された基板の上に、赤外線入出力と、ボタン2個、おまけに光学センサー付きの憎いやつ。裏側の回路とハンダ付けの精細さがプロの仕事を物語っております。で、これを制御する6種類のコマンドを含んだスケッチもありますよ〜というお膳立て。ここまでの用意があれば、PPMってなに？( ﾟдﾟ)ﾎﾟｶｰﾝ　な自分でも前半の講義を聞いてちょっと頑張ればナニモノカが出来る、という完璧な準備でした。オーガナイズしてくださった宮里さん＆鈴木さん、本当にありがとうございましたm(_ _)m
+機材の関係もありペアプロで、ということで僕は @sleepycat_zzzさんとペアになりました。いやー、おいらペアプロやったことなかったのでゴメンナサイ。なんか、どうやればいいのか全く分からず、各自モクモクな流れになっちゃいました。。
+何をやっていたかというと まず二人でPPMの勉強からはじめました。自宅から持ってきたリモコンのデータの解析は機器の都合上鈴木さんがやってくださったので、それを見ながらパルスをダンプしたものを解析して、16進数でどう表されているか？というデコードの部分をお勉強。赤外線受光部に向けて、リモコンのボタンを押すとパルスのOnOffのマイクロ秒がダンプが取れるので、それをこんな感じでメモってみて、あーこういうコードを送ってるのね、というのをまず理解しました。アナログな入出力でデジタル信号を送ってるのがオモシレーって話ですね。それを元にデコーダを書こうかなと思ったのですが、僕は(rubyで書くの面倒いという理由だけで)断念し、結局これを@sleepycat_zzzさんがあとでモクモクの時にチャレンジしていた模様です。
+その後、何をやろうか二人で一致した目的を相談することもなく(^^ゞ、だらっと各自モクモクし始めました。@sleepycat_zzzさんは前述のデコーダの部分をRubyで、僕はシリアル制御のためのREST APIを書きたかったので、JavaでArduinoを制御するのを試し始めました。ええ、書き間違いではないです。「Ruby x Arduino ワークショップ」に来ているにもかかわらず、Javaで書いてます:)
+以下MacのJDK1.6or1.7で動かすまでのメモです。 Javaでシリアル通信するために、RXTXというライブラリをこちらから落として入れておいて下さい。READMEにあるように、jarとjnilibを/Library/Java/Extensions/を入れればいいのですが、どうやら64bitOSだとjnilibがうまく動かないっぽいので、こちらにあるファイルで上書きしちゃいました。この辺りはこちらのブログを参考にさせて頂きました。
+Eclipseで、mavenプロジェクトでやるのであれば、pom.xmlのdependenciesに
+ &lt;dependency&gt; &lt;groupid&gt;org.rxtx&lt;/groupid&gt; &lt;artifactid&gt;rxtx&lt;/artifactid&gt; &lt;version&gt;2.1.7&lt;/version&gt; &lt;/pre&gt;  を追加すればgnu.io.*クラス群を使ってコンパイルは出来るはずなのですが、この状態であんまり見たことのない「アクセス制限: 型 SerialPort は必須ライブラリー /Library/Java/Extensions/RXTXcomm.jar で制限されているためアクセスできません」とかいうエラーが出て来ました。
+これはこちらのブログでご指摘のとおり、ビルド・パスの構成 → ライブラリータブのJREシステム・ライブラリーのアクセスルールを編集 → 追加で、「gnu/**」を「アクセス許可」、などとすると上手くビルドできるようになると思います。
+Javaでシリアル通信 で、いくつかチョロチョロとシリアル通信のサンプルプログラムを書いて見たところ、上手く動いているようです。やったね。
+1回シリアルポートにつながれば、後は普通のストリームのプログラミングなので、例えばIRTXコマンドを書き込むならこんな感じで渡せます。
+ out.write(&quot;RTX&quot;.getBytes(&quot;ISO-8859-1&quot;)); out.flush();  （改行コードの有無とか、文字エンコーディングとか、毎回flushするのかしないのかなどモロモロ試行錯誤したのは省きます）
+JavaでRESTサーバを書く 本当は、実験がてらNinja web frameworkで書こうと思ったのですが、何故かmvn archetype:generate が上手く動いてくれず断念しましたorz
+代わりにJAX-RSでチョロチョロっとアノテーションを書いて、サーバはもちろんjettyを使ってRESTサーバを仕立てて、あるURLを叩くとLEDランプが付く！というところまで何とか滑りこみで成果発表に間に合わせることができました。これを公開すれば誰かがURLを叩くたびにLEDチカチカ完成！"/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Archived my historic blog" rel="home">
+				<div class="logo__title">Archived my historic blog</div>
+				
+			</a>
+		</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">モノdeサバイ部 #1に行って来ました / ArduinoとJavaの素敵な関係</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2013-05-05T18:00:00&#43;09:00">2013-05-05</time></div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p>atnd登録したその日に注文して、ほとんど未開封のArduinoとワクドキの心をセットにして、5月3日に行われた<a href="http://atnd.org/event/monobu1/0">モノdeサバイ部
+#1</a>に行って来ましたよ！<br>
+ハッシュタグは
+<a href="https://twitter.com/search?q=%23monobu1&amp;src=typd">#monobu1</a>
+、USTも最後の成果発表だけはしてたっぽいですがURLは不明です。。</p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><a href="/images/blogspot/blogspot-2013-05-05-de-1-arduinojava-2013-05-03+13.16.20.jpg"><img src="/images/blogspot/thumbnails/blogspot-2013-05-05-de-1-arduinojava-2013-05-03+13.16.20.jpg" /></a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">MG Waveさんに集結した大きな子供達</td>
+</tr>
+</tbody>
+</table>
+<p>詳細はatndを見てもらうと分かるんですが、この勉強会はArduino+Rubyでなんかやろうぜワークショップ、だと信じていたのですが、それは化けの皮で実体は</p>
+<p><span style="font-size: large;">@mgwsuzukiさんが特製shield<br>
+作ってくれたから、<br>
+これでお前らハッカソンしろ！</span></p>
+<p>というワンダーランドでございました。</p>
+<p><span id="more"></span></p>
+<p><a href="/images/blogspot/blogspot-2013-05-05-de-1-arduinojava-2013-05-05+12.36.33.JPG"><img src="/images/blogspot/thumbnails/blogspot-2013-05-05-de-1-arduinojava-2013-05-05+12.36.33.JPG" alt=""></a><a href="/images/blogspot/blogspot-2013-05-05-de-1-arduinojava-2013-05-05+12.49.03.JPG"><img src="/images/blogspot/thumbnails/blogspot-2013-05-05-de-1-arduinojava-2013-05-05+12.49.03.JPG" alt=""></a></p>
+<p>驚きですよ、なんせこれですからね。僕が今お借りしているのはNo.3のナンバリングがされてるものです。鈴木さんがご自分で設計＆制作された基板の上に、赤外線入出力と、ボタン2個、おまけに光学センサー付きの憎いやつ。裏側の回路とハンダ付けの精細さがプロの仕事を物語っております。で、これを制御する6種類のコマンドを含んだスケッチもありますよ〜というお膳立て。ここまでの用意があれば、<a href="http://en.wikipedia.org/wiki/Pulse-position_modulation">PPM</a>ってなに？(
+ﾟдﾟ)ﾎﾟｶｰﾝ　な自分でも前半の講義を聞いてちょっと頑張ればナニモノカが出来る、という完璧な準備でした。オーガナイズしてくださった宮里さん＆鈴木さん、本当にありがとうございましたm(_
+_)m</p>
+<p>機材の関係もありペアプロで、ということで僕は
+<a href="https://twitter.com/sleepycat_zzz">@sleepycat_zzzさん</a>とペアになりました。いやー、おいらペアプロやったことなかったのでゴメンナサイ。なんか、どうやればいいのか全く分からず、各自モクモクな流れになっちゃいました。。</p>
+<h2 id="何をやっていたかというと">何をやっていたかというと</h2>
+<p>まず二人でPPMの勉強からはじめました。自宅から持ってきた<a href="https://docs.google.com/file/d/0B89-Np6LQHeFSDVONVdaMVBFV0k/edit?usp=sharing">リモコンのデータの解析</a>は機器の都合上鈴木さんがやってくださったので、それを見ながらパルスをダンプしたものを解析して、16進数でどう表されているか？というデコードの部分をお勉強。赤外線受光部に向けて、リモコンのボタンを押すとパルスのOnOffのマイクロ秒がダンプが取れるので、それを<a href="https://docs.google.com/spreadsheet/ccc?key=0As9-Np6LQHeFdHhXVlRsOXZKZ2lraUpMdTdxcnB0N0E&amp;usp=sharing">こんな感じでメモって</a>みて、あーこういうコードを送ってるのね、というのをまず理解しました。アナログな入出力でデジタル信号を送ってるのがオモシレーって話ですね。それを元にデコーダを書こうかなと思ったのですが、僕は<span
+style="font-size: xx-small;">(rubyで書くの面倒いという理由だけで)</span>断念し、結局これを@sleepycat_zzzさんがあとでモクモクの時にチャレンジしていた模様です。</p>
+<p>その後、何をやろうか二人で一致した目的を相談することもなく(^^ゞ、だらっと各自モクモクし始めました。@sleepycat_zzzさんは前述のデコーダの部分をRubyで、僕はシリアル制御のためのREST
+APIを書きたかったので、<span
+class="underline">JavaでArduinoを制御する</span>のを試し始めました。ええ、書き間違いではないです。「Ruby
+x Arduino ワークショップ」に来ているにもかかわらず、Javaで書いてます:)</p>
+<h3 id="以下macのjdk16or17で動かすまでのメモです">以下MacのJDK1.6or1.7で動かすまでのメモです。</h3>
+<p>Javaでシリアル通信するために、<a href="http://rxtx.qbang.org/wiki/index.php/Main_Page">RXTX</a>というライブラリをこちらから落として入れておいて下さい。READMEにあるように、jarとjnilibを/Library/Java/Extensions/を入れればいいのですが、どうやら64bitOSだとjnilibがうまく動かないっぽいので、<a href="https://code.google.com/p/arduino/issues/detail?id=172">こちら</a>にあるファイルで上書きしちゃいました。この辺りは<a href="http://cho-kotan.blogspot.jp/2012/10/javaavrmacjavaavr.html">こちらのブログ</a>を参考にさせて頂きました。<br>
+Eclipseで、mavenプロジェクトでやるのであれば、pom.xmlのdependenciesに</p>
+<pre><code>  &lt;dependency&gt;
+   &lt;groupid&gt;org.rxtx&lt;/groupid&gt;
+   &lt;artifactid&gt;rxtx&lt;/artifactid&gt;
+   &lt;version&gt;2.1.7&lt;/version&gt;
+  &lt;/pre&gt;
+</code></pre>
+<p>を追加すればgnu.io.*クラス群を使ってコンパイルは出来るはずなのですが、この状態であんまり見たことのない「アクセス制限:
+型 SerialPort は必須ライブラリー /Library/Java/Extensions/RXTXcomm.jar
+で制限されているためアクセスできません」とかいうエラーが出て来ました。<br>
+これは<a href="http://blog.bitmeister.jp/?p=1486">こちらのブログ</a>でご指摘のとおり、ビルド・パスの構成
+→ ライブラリータブのJREシステム・ライブラリーのアクセスルールを編集 →
+追加で、「gnu/**」を「アクセス許可」、などとすると上手くビルドできるようになると思います。</p>
+<h2 id="javaでシリアル通信">Javaでシリアル通信</h2>
+<p>で、いくつかチョロチョロとシリアル通信のサンプルプログラムを書いて見たところ、上手く動いているようです。やったね。<br>
+1回シリアルポートにつながれば、後は普通のストリームのプログラミングなので、例えばIRTXコマンドを書き込むならこんな感じで渡せます。</p>
+<pre><code>     out.write(&quot;RTX&quot;.getBytes(&quot;ISO-8859-1&quot;));
+     out.flush();
+</code></pre>
+<p>（改行コードの有無とか、文字エンコーディングとか、毎回flushするのかしないのかなどモロモロ試行錯誤したのは省きます）</p>
+<h2 id="javaでrestサーバを書く">JavaでRESTサーバを書く</h2>
+<p>本当は、実験がてら<a href="http://www.ninjaframework.org/">Ninja web
+framework</a>で書こうと思ったのですが、何故かmvn
+archetype:generate が上手く動いてくれず断念しましたorz<br>
+代わりにJAX-RSでチョロチョロっとアノテーションを書いて、サーバはもちろんjettyを使ってRESTサーバを仕立てて、あるURLを叩くとLEDランプが付く！というところまで何とか滑りこみで成果発表に間に合わせることができました。これを公開すれば誰かがURLを叩くたびにLEDチカチカ完成！</p>
+<h2 id="分かったソースはよ">分かった、ソースはよ</h2>
+<p>というツッコミがあることは覚悟しているのですが、すみません、なんかシリアル通信の部分が1回投げると掴んだままになってしまうという超致命的なバグなのか動作不良がありまして、サービスとしてはダメダメなのでもうちょっとちゃんと仕立ててからにします。</p>
+<h2 id="今後の目標">今後の目標</h2>
+<p>さて、今回shieldをお借りしている、と冒頭に書きましたが、そう、これワンオフの特注品なので今回は「次回のワークショップまで貸すからなんか作れ」ということでお借りして来ました。やりたい夢広がりんぐなのですが、取り敢えずいま頭に浮かんだものをここに箇条書きに書いておきます。</p>
+<ul>
+<li>取り敢えず家にあるリモコンのコードを全部デコードしてみる。でもリビングにMacを置くのが面倒だからこれはどうなのか。。</li>
+<li>酔っ払って帰ってきたら、気づくと<a href="http://www.amazon.co.jp/gp/product/B009BL5B9Y?ie=UTF8&amp;camp=1207&amp;creative=8411&amp;creativeASIN=B009BL5B9Y&amp;linkCode=shr&amp;tag=westisland-22&amp;psc=1">こんな玩具</a>を買っていたのでこいつを制御してみる。</li>
+<li>仕事部屋がLED照明なので、照度センサを使って常に一定の光量になるように自動調光する、とか。これから夏に向けて自然光の光量との兼ね合いが難しくなってくるんですよねぇ。</li>
+<li>テルミンじゃないけどシンセ作りたいなぁ、とか。</li>
+</ul>
+<p>まあ、いろいろです。取り敢えず自分でシールド作れないとどうしようもない気がしますがひとまず妄想だけは。</p>
+<h2 id="懇親会">懇親会</h2>
+<p>19時まであと15分だけどその間は一串50円でがあったりとか、鈴木さんがシリアルポートについて死ぬほど語るとか、SDNの話が飛び交うとか、いきなりOpenStackのデモが始まるとか、デバイスからクラウドまで相変わらず何だかカオスな懇親会でしたwww。2軒目は禁煙の素敵なバーに連れて行って頂きました。</p>
+<p><span
+style="font-size: x-small;">とっても楽しかったんですが、2時頃に帰ってきて、犬が朝5時半に起こしに来て散歩に行くのだけは辛かったです(^^ゞ</span></p>
+<p>P.S.</p>
+<p>あ、FPGAのお話伺うの忘れた。また今度、よろしくお願いします！</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/study-group/" rel="tag">study-group</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/arduino/" rel="tag">arduino</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/2013/04/blogspot-2013-04-28-cloud-on-beach-2013/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Cloud on the BEACH 2013 in 沖縄、無事終了</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/2013/05/blogspot-2013-05-22-jmx/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Java使いならJMXを使おう その1</p>
+		</a>
+	</div>
+</nav>
+
+
+
+			</div>
+			<aside class="sidebar">
+
+<div class="widget-recent widget">
+	<h4 class="widget__title">about</h4>
+	<div class="widget__content about_widget">
+      <a class="widget__link" href="/about/">About me and this site</a></li>
+
+    </div>
+        <a class="twitter-timeline" data-width="300" data-height="500" href="https://twitter.com/k_nishijima?ref_src=twsrc%5Etfw">Tweets by k_nishijima</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        
+</div>
+
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+              <time class="meta__text" datetime="2017-10-14T12:10:00&#43;09:00">2017-10-14</time>
+              <a class="widget__link" href="/2017/10/blogspot-2017-10-14-medium/">ブログをMediumに引っ越しました</a></li>
+			<li class="widget__item">
+              <time class="meta__text" datetime="2017-07-01T17:21:00&#43;09:00">2017-07-01</time>
+              <a class="widget__link" href="/2017/07/blogspot-2017-07-01-hackers-champloo2017/">ハッカーズチャンプルー2017、今年も無事終わりました</a></li>
+			<li class="widget__item">
+              <time class="meta__text" datetime="2017-05-13T14:24:00&#43;09:00">2017-05-13</time>
+              <a class="widget__link" href="/2017/05/blogspot-2017-05-13-jaws-ug-cloud-on-beach-2017/">JAWS-UG沖縄 Cloud on the BEACH 2017 今年もいい天気でした！</a></li>
+			<li class="widget__item">
+              <time class="meta__text" datetime="2017-01-01T17:33:00&#43;09:00">2017-01-01</time>
+              <a class="widget__link" href="/2017/01/blogspot-2017-01-01-eip/">2017年、今年はどんな年にしますか</a></li>
+			<li class="widget__item">
+              <time class="meta__text" datetime="2016-07-11T22:55:00&#43;09:00">2016-07-11</time>
+              <a class="widget__link" href="/2016/07/blogspot-2016-07-11-hackers-champloo2016/">ハッカーズチャンプルー2016、無事終わりました</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/arduino/" title="arduino">arduino (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/as1410/" title="as1410">as1410 (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/aws/" title="aws">aws (29)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cassandra/" title="cassandra">cassandra (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/desire/" title="desire">desire (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/golang/" title="golang">golang (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hackers-champloo/" title="hackers-champloo">hackers-champloo (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/java/" title="java">java (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mac/" title="mac">mac (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/remote-work/" title="remote-work">remote-work (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/scala/" title="scala">scala (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/study-group/" title="study-group">study-group (42)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tightbell/" title="tightbell">tightbell (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ubuntu/" title="ubuntu">ubuntu (9)</a>
+	</div>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Archives</h4>
+	<div class="widget__content">
+      
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2020">2020</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2017">2017</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2016">2016</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2015">2015</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2014">2014</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2013">2013</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2012">2012</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2011">2011</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2010">2010</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2009">2009</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2008">2008</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2006">2006</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2005">2005</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2004">2004</a>
+        
+	</div>
+</div>
+
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Facebook" rel="noopener noreferrer" href="https://facebook.com/nishijima.koichiro" target="_blank">
+				<svg class="widget-social__link-icon icon icon-facebook" width="24" height="24" viewBox="0 0 352 352"><path d="m0 32v288c0 17.5 14.5 32 32 32h288c17.5 0 32-14.5 32-32v-288c0-17.5-14.5-32-32-32h-288c-17.5 0-32 14.5-32 32zm320 0v288h-83v-108h41.5l6-48h-47.5v-31c0-14 3.5-23.5 23.5-23.5h26v-43.5c-4.4-.6-19.8-1.5-37.5-1.5-36.9 0-62 22.2-62 63.5v36h-42v48h42v108h-155v-288z"/></svg>
+				<span>Facebook</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/k_nishijima" target="_blank">
+				<svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
+				<span>Twitter</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/k-nishijima" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+
+		
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Koichiro Nishijima.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>
