@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>as1410 on Archived my historic blog</title>
+    <link>https://k-nishijima.github.io/tags/as1410/</link>
+    <description>Recent content in as1410 on Archived my historic blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 13 Jan 2010 01:10:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://k-nishijima.github.io/tags/as1410/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ubuntu9.10 on aspire as1410 でハイバネート</title>
+      <link>https://k-nishijima.github.io/2010/01/blogspot-2010-01-13-ubuntu910-on-aspire-as1410_13/</link>
+      <pubDate>Wed, 13 Jan 2010 01:10:00 +0900</pubDate>
+      
+      <guid>https://k-nishijima.github.io/2010/01/blogspot-2010-01-13-ubuntu910-on-aspire-as1410_13/</guid>
+      <description>ついにサスペンド問題も解決か！？！？（前とは探し方が何か違ったのか??それともカーネルが上がったお陰??）
+via 「How to: Karmic Koala on Acer 1410 / 1810T/ 1810TZ」
+http://ubuntuforums.org/showthread.php?p=8409272
+ Issues: Hibernate/resume:
+ Issue: after hibernating or suspending, the computer won&amp;rsquo;t wake up properly.
+Solution: gksudo gedit /etc/modprobe.d/blacklist.conf to edit the file and add the following (without quotes): &amp;ldquo;blacklist acer-wmi&amp;rdquo;
+  この通りにして1回念のため再起動した後は、今のところサスペンド後、この書き込みが出来るまでは進んでる！
+サスペンドからの復旧後にちゃんと無線LANも復旧するし。
+これからハイバネートしてお風呂入って、出てきて復旧してたらこれを公開するぞと。
+-&amp;gt; 出来たみたい。ハイバネートは相当時間かかるけどね。ふた閉めてのサスペンドも問題ない模様。おぉー、うれしいなー。as1410友の会（んなのがあればだが）のメンバー全員に広めたい気分！</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu9.10 on aspire as1410 その後</title>
+      <link>https://k-nishijima.github.io/2010/01/blogspot-2010-01-01-ubuntu910-on-aspire-as1410/</link>
+      <pubDate>Fri, 01 Jan 2010 12:22:00 +0900</pubDate>
+      
+      <guid>https://k-nishijima.github.io/2010/01/blogspot-2010-01-01-ubuntu910-on-aspire-as1410/</guid>
+      <description>さて、昨年末買っちゃったaspire as1410ですが、現在のワーク環境はこんな感じで落ち着きました。
+@ubuntumag vol.02のCDROMからインストールしたUbuntu 9.10 32bit版です（ちなみにオフィスのデスクトップ環境も同じく9.10で、あっちは64bit版）。
+
+Compizも好調なり
+で、悩みに悩んでいたハードディスクの不調（起動に異常に時間がかかったり、リブートすると不意にファイルが壊れたり）の原因がようやくはっきりしました。
+&amp;amp;amp;lt;iframe name=&amp;quot;tp106810&amp;rdquo; id=&amp;quot;tp106810&amp;rdquo; width=&amp;quot;500&amp;rdquo; height=&amp;quot;200&amp;rdquo; frameborder=&amp;quot;0&amp;rdquo; src=&amp;quot;http://tweetpaste.thingamaweb.com/embed/106810/&amp;rdquo; style=&amp;quot;overflow: hidden; display: block; width: 500px; height: 200px;&amp;quot;&amp;amp;amp;gt;&amp;amp;amp;lt;p&amp;amp;amp;gt;&amp;amp;amp;lt;a href=&amp;quot;http://tweetpaste.thingamaweb.com/embed/106810/&amp;rdquo; target=&amp;rdquo;_blank&amp;rdquo;&amp;amp;amp;gt;View k_nishijima&amp;amp;amp;amp;rsquo;s tweet&amp;amp;amp;lt;/a&amp;amp;amp;gt;&amp;amp;amp;lt;/p&amp;amp;amp;gt;&amp;amp;amp;lt;/iframe&amp;amp;amp;gt;
+とつぶやいたところ、@WdWeaverさんが
+&amp;amp;amp;lt;iframe name=&amp;quot;tp106811&amp;rdquo; id=&amp;quot;tp106811&amp;rdquo; width=&amp;quot;500&amp;rdquo; height=&amp;quot;200&amp;rdquo; frameborder=&amp;quot;0&amp;rdquo; src=&amp;quot;http://tweetpaste.thingamaweb.com/embed/106811/&amp;rdquo; style=&amp;quot;overflow: hidden; display: block; width: 500px; height: 200px;&amp;quot;&amp;amp;amp;gt;&amp;amp;amp;lt;p&amp;amp;amp;gt;&amp;amp;amp;lt;a href=&amp;quot;http://tweetpaste.thingamaweb.com/embed/106811/&amp;rdquo; target=&amp;rdquo;_blank&amp;rdquo;&amp;amp;amp;gt;View WdWeaver&amp;amp;amp;amp;rsquo;s tweet&amp;amp;amp;lt;/a&amp;amp;amp;gt;&amp;amp;amp;lt;/p&amp;amp;amp;gt;&amp;amp;amp;lt;/iframe&amp;amp;amp;gt;
+と教えてくださったのでおおおそうなのか！とNCQについて調べたところ、うちのas1410ではBIOSの設定でSATAのモードをAHCIからIDEに変えたところ、すこぶる機嫌が良くなってくれました。今のところ起動は30秒弱で、ファイルが壊れることも当然ありません（予備的にext3にしておいたのはたぶん関係ないと思います）。NCQの状態はこんな感じ。
+west@bang-doll:~$ dmesg | grep depth
+[ 1.715228] ata1.00: 488397168 sectors, multi 16: LBA48 NCQ (depth 0/32)
+※ググるとよく出てくる「sudo echo 1 &amp;gt; /sys/block/sda/device/queue_depth」という手はうちでは使えませんでした。。。</description>
+    </item>
+    
+    <item>
+      <title>as1410でJolicloud！</title>
+      <link>https://k-nishijima.github.io/2009/12/blogspot-2009-12-23-as1410jolicloud/</link>
+      <pubDate>Wed, 23 Dec 2009 01:39:00 +0900</pubDate>
+      
+      <guid>https://k-nishijima.github.io/2009/12/blogspot-2009-12-23-as1410jolicloud/</guid>
+      <description>CULVノートでUNR使ってみたい人がいたらチャレンジするかなーと思って、とりあえず僕もas1410に入れてみました（Ubuntu9.10 64/32版ともにスリープがダメダメ＆起動に2分以上かかるってのが大きいんですが。。。実はディスクがおかしいんかな???） 。
+
+この間のaspire oneより画面が広い。
+このJolicloudですが、既にベータテストが始まりましたのでサイトからISOなりなんなりダウンロード可能な状態となっています。試してみたい方は是非。inviteも出来るのでtwitterでDでメルアドでも送ってもらえればお送りします。
+こいつとacer aspire as1410との相性はと言うと。。。今のところ快調ですが。。。色々ネタはあります。
+良いところ：
+ 今のところ100%スリープが使える。蓋閉じ、Fn+F4ともにOK。復旧後の無線LANも問題無し。これはとても大きいですね。 常に最大化（何て言うツールなんでしたっけこれ）で画面が広く使える。as1410は天地が768しかないので、ステータスバーがつかなかったりして地味に広がるのがうれしい。  問題点：
+ インストール後のブートでエラー出まくり＆無茶苦茶時間かかる。ちと違うけどこんなのがいっぱい。よくブート出来たもんだ。1度起動したら落とさなきゃ何てことないのかも知れんが。。。   ata5.00: failed command: READ FPDMA QUEUED
+ata1: status: { DRDY ERR }
+ata1: error ICRC ABORT
+などなど
+  標準では無線LAN認識してくれません。なので別マシンか有線でつないでインテルのサイトから「1000 Images – for Intel WiFi Link 1000BGN」を落としてきて /lib/firmware/ に入れて再起動してあげる必要があります。 Fnキーでのハードウェア、全部動かないかも。。。カメラ、SDカードはOK、試した範囲で動いたのはF1/F4/F7/F8/カーソルでの音量、輝度、などなどもOK。というかこれらFn+色々なキーを試している間にハングしたのでもうこれ以外やってません（涙） で、パッケージマネージャはMy Jolicloudしか無いわけですが、emacs23はどこ？（違）   最後にお約束のunameを貼っておきますか。ホスト名は破烈の人形にしてみました（うちのマシンたちMHの名前付いてるの多し。MacBookはaugeだし）。
+west@bang-doll:~$ cat /proc/version
+Linux version 2.6.32-1-jolicloud (adamm@gw) (gcc version 4.3.3 (Ubuntu 4.3.3-5ubuntu4) ) #3 SMP Thu Dec 3 05:54:26 MST 2009</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu9.10サスペンド問題再び</title>
+      <link>https://k-nishijima.github.io/2009/12/blogspot-2009-12-19-ubuntu910/</link>
+      <pubDate>Sat, 19 Dec 2009 13:12:00 +0900</pubDate>
+      
+      <guid>https://k-nishijima.github.io/2009/12/blogspot-2009-12-19-ubuntu910/</guid>
+      <description>.orgの方ではものすごく長いスレッドで騒いでいるにもかかわらず日本ではあんまり誰も騒いでいない気がする9.10のサスペンド不具合。
+僕のas1410の場合は、蓋を閉じたときおよびFn+F4キーでのサスペンド自体は素早く出来て問題なし。
+蓋を開ける、もしくはキーを触るでパスワード確認画面が出るまでも問題なし。ここまではすごく速い。
+で、 パスワード入力後、デスクトップに戻ってくるも、無線LANも復旧できないし、そもそもキーボード入力を受け付けない！（さっきのパスワードを入力するときとか、メッセージを残すとかでは問題なかったのに）。
+で、Terminalでshutdowを試みようにもキーボードが全然反応しないので出来ず、tty1に切り替えようにもAlt+Ctrl+F1も効かず、 どうしようもない状態になる。
+で、Gnomeのシャットダウンボタンは押せるので押すと、すぐ画面は落ちるけど、100%正常にシャットダウンは出来ない（途中で止まる。エラーメッセージはメモってないけど。。。）。こうなると、いつまでたっても電源が切れないので仕方なく電源ボタン長押し、と。。。
+あれ、以前試したけど再度、この投稿を試したところ、蓋閉じはNGだけどF4のスリープでは復旧後ちゃんと使えたよ！
+って、こういう風に動いたり動かなかったりするからおかしいんだよねー。。。</description>
+    </item>
+    
+    <item>
+      <title>ぼちぼち環境設定</title>
+      <link>https://k-nishijima.github.io/2009/12/blogspot-2009-12-17-blog-post/</link>
+      <pubDate>Thu, 17 Dec 2009 23:50:00 +0900</pubDate>
+      
+      <guid>https://k-nishijima.github.io/2009/12/blogspot-2009-12-17-blog-post/</guid>
+      <description>さて、相変わらずサスペンドの後のネットワーク/キーボードの復旧が出来たり出来なかったりなacer ASPIRE AS1410ですがバックアップ用のポータブルHDDも買ったことだし、ぼちぼち環境設定を始めました（サスペンドはどうやらふたを閉めないでFn+F4でやればいいとか。。。後で試してみよう）。
+emacs23とかGnome DOとかDropBoxとかメジャーどころも当然入れましたが、日本人なら何はなくともATOKでしょう、ということでさくっと。。。。と思いきや、64ビット版には入れるの結構大変でした。悩んだところ、a-mutou さんの素晴らしいブログを発見したのでそのまま使わせていただきました。ありがとうございました。以下はコマンドのヒストリを防備録として貼り付けておきます。
+ $ sudo apt-get install ia32-libs
+$ tar xzvf atokx3.tar.gz
+$ cd ATOKX3
+$ sudo -s
+ 94 export LANG=C
+95 touch /etc/gtk-2.0/gtk.immodules
+96 bash ./setupatok_tar.sh
+97 cd bin/tarball/IIIMF/
+98 tar zxvf iiimf-client-lib-trunk_r3104-js3.i386.tar.gz
+99 tar zxvf iiimf-protocol-lib-trunk_r3104-js3.i386.tar.gz
+100 mv ./usr/lib/* /usr/lib32/
+101 wget http://ftp.ussg.iu.edu/linux/ubuntu/pool/main/t/tcp-wrappers/libwrap0_7.6.q-18_i386.deb
+102 dpkg &amp;ndash;fsys-tarfile libwrap0_7.6.q-18_i386.deb |tar xf -
+103 mv ./lib/libwrap.so.0* /usr/lib32/
+104 /sbin/ldconfig
+ 105 cd ~/tmp/
+106 tar zxvf atokx3up2.</description>
+    </item>
+    
+    <item>
+      <title>Aspire 1410買っちった。。。</title>
+      <link>https://k-nishijima.github.io/2009/12/blogspot-2009-12-13-aspire-1410/</link>
+      <pubDate>Sun, 13 Dec 2009 02:11:00 +0900</pubDate>
+      
+      <guid>https://k-nishijima.github.io/2009/12/blogspot-2009-12-13-aspire-1410/</guid>
+      <description>勢いでAspire 1410買ってしまいました:)
+Windows7のリカバリディスクを作ってサクッと消してUbuntu9.10を入れ始めた所まではよかったんですが。。。これがハマるハマる（涙）
+64Bit版を入れて、その後updateしてるんですがカーネルか何かをあげたときに謎の”&amp;quot;/lib/libm.so.6 invalid ELF header error” でブート中に立ち往生とか、mountall中にfsck失敗とか、なんだそりゃ？ってな状況が色々。おかげでこんな時間に。。。うう。。
+ひとまず、JA-Localizedだけしてカーネルとかはそのままにしておけば一応使える状態になることが分かったので、今日はひとまずここまでにして寝ますかね。
+ 本日の印象まとめ：
+  64Bit版だから？デスクトップの挙動が所々なんか怪しい。 キーボードは思ったよりいいと思ってたけど、この位のblogを書き出したらキーが「キュッキュ」って鳴いてる（ははは、こりゃうるさいな） とりあえず明日はJDK入れよう。。。  ふー、眠い。。。</description>
+    </item>
+    
+  </channel>
+</rss>

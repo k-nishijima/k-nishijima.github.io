@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cassandra on Archived my historic blog</title>
+    <link>https://k-nishijima.github.io/tags/cassandra/</link>
+    <description>Recent content in cassandra on Archived my historic blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 01 Mar 2011 08:13:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://k-nishijima.github.io/tags/cassandra/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>partake.inソースコードリーディング#1</title>
+      <link>https://k-nishijima.github.io/2011/03/blogspot-2011-03-01-partakein1/</link>
+      <pubDate>Tue, 01 Mar 2011 08:13:00 +0900</pubDate>
+      
+      <guid>https://k-nishijima.github.io/2011/03/blogspot-2011-03-01-partakein1/</guid>
+      <description>ユーザ会のサイトにもアップしましたが、一応自分のブログにもアップしておきます。</description>
+    </item>
+    
+    <item>
+      <title>Cassandra Hands-on Training by Riptano【日本語通訳付】に行ってきた</title>
+      <link>https://k-nishijima.github.io/2010/12/blogspot-2010-12-28-cassandra-hands-on-training-by-riptano/</link>
+      <pubDate>Tue, 28 Dec 2010 18:43:00 +0900</pubDate>
+      
+      <guid>https://k-nishijima.github.io/2010/12/blogspot-2010-12-28-cassandra-hands-on-training-by-riptano/</guid>
+      <description>はや１週間前になってしまいますが、第13回Cassandra勉強会にて「Cassandra Hands-on Training by Riptano【日本語通訳付】に行ってきた！」と題して発表してきたので資料をアップします。
+なんと、ジェミナイの本橋様が英語版を作ってNate氏に送ってくださいました！生の声が届いてより良いトレーニングが行われるといいですね。
+ユーザ会のサイトもメンテして、ちゃんとそこに集約するようにしなきゃ。。。</description>
+    </item>
+    
+  </channel>
+</rss>

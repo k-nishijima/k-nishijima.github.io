@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Bitcasaが熱い！（けど息絶えたorz） - Archived my historic blog</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<meta property="og:title" content="Bitcasaが熱い！（けど息絶えたorz）" />
+<meta property="og:description" content="2014年10月26日追記：
+というわけで、1年半くらい頑張ったのですが、とうとう無料プランが終了しましたorz
+合掌・・・＼(^o^)／ｵﾜﾀ 追記終わり：
+個人的に随分前から注目はしていたのですが、ようやく本サービス開始ということで黄金期に入るのか、はたまた消えるのか分かりませんが、数あるクラウド系サービスの中で今自分の中ではBitcasaが熱いです（AWSを例外とすれば、ね）。
+まだサインアップされていない方は、以下からサインアップするときっといいことがありますので是非:)
+http://l.bitcasa.com/EOJyoc8l
+
+Bitcasaとは？というのは他に多数上がっている記事に譲るとして、ここではざっと使い勝手やメリットデメリットなどを軽く挙げます。
+まずDropboxとの大きな違いは、ローカルディスクをミラーリングするだけではないので、ローカルディスクよりも大きな容量を保存することができます。なので、ローカルファイル（というかディレクトリ）をミラーリングしてバックアップ的な使い方もできますし、ハードディスクの肥やしになりそうな例えばデジカメ写真は、アップロード後にローカルから削除して空き容量を増やす、ということもできます。
+で、話題になっていると思いますが容量無制限といっても、実際にはプロバイダなどの帯域制限がありますから、例えば自宅からは1ヶ月に30G以上アップロード出来ないとか、CATVみたいに上り回線が細いところとか（はい、私のことです&hellip;orz）諸々物理的な制約がありますのでご注意下さい。
+クライアントはMac/Win/iPhone/Android/そしてアルファ版ですがLinux版もありました。
+Android版はNexus7と携帯に入れていますが、シンプルながら動作はいずれも良好です。写真やPDFの閲覧（これは落としてきてアプリ起動してるだけか）、MP3の再生など基本的な機能が揃っています。
+ですが、個々のアプリとしての機能はかなり貧弱です。例えば、MP3の再生機能はありますが、アルバム単位で順次再生しかできないとか、1曲終わったら次をダウンロードして再生、という動きをしているっぽいのでWiFi環境なら問題なくクラウドジュークボックスになるのですが、外出時3G回線でとなると曲と曲の間に「し〜ん」となってしまうとか、色々未熟な感じです。前の曲を再生中に次の曲のサイズと回線速度を見て、バックグラウンドでダウンロードしておく、なんていうインテリジェンスな動きはこれっぽっちもありません。
+まあこの辺は、いずれAPIが公開されれば誰かがこぞって改善するでしょうから、しばらく待ちましょう。腕に覚えのある開発者の方は
+https://www.bitcasa.com/developers
+から登録しておいて下さい。
+さてMac版のクライアントの方ですが、これは僕の環境では今ひとつ安定性にかけるような感じです。いや、ファイルのやり取りとかは問題無さそうなんですが、マウントしているディスクアイコンをクリックしても、時々中身が何も表示されないとか。
+これ、実はFinder拡張であるXtraFinderを使っているせいかもしれません。切り分けてないのでなんとも言えないんですが。
+また、いくつかの記事で触れられていた気がしますが、どうやらローカルで暗号化してから(?)ファイルをアップロードしているようなので、細かいファイルが多数ある場合は結構CPUパワーを食います。
+容量無制限だったらそりゃTimeMachineに使うでしょ！って記事を書こうと思っていたのですがnnasakiさんに先を越されたorzので、リンク張っておきます。
+自分は小さく400GBくらいのスパーズディスクを作りましたが、これだと初期サイズ440MB位なので、アップロードもそれほど苦ではありません。
+問題なければs3backerのはやめて、こちらに移行しようと思ってます。先月15ドルくらい行っちゃってるので。。。
+あ、nnasakiさんの仰っている「s3は従量制でトランザクション料も別途取られる」は微妙にあっていて間違っているので1つ指摘を。
+ 容量に対して従量制 ＝ OK トランザクション料（多分もろもろ通信費の意味だと思いますが）
+→ リクエスト料金（ファイル一覧したりなんだり） : 従量制
+データ転送量：上り（S3への書き込み）は無料、下り（S3からのダウンロード）は従量制  まあ詳しくは料金表をご確認下さい。
+で、これを書いた上で「BitcasaってバックエンドはS3使ってるんだぜ」ってのを考えると、月たった10ドルで容量無制限ってあんた、よっぽど自社の重複削除技術に自信があるのか、はたまた無謀な賭けなのか、どっちに転ぶかが見ものです。いいですなぁ、何れにしてもAWSはがっぽり儲かる、とwww
+さあ、これを読んでサインアップしてみたくなったアナタ、↓よりサインアップするのです。特典が何なのか、どこかに書いてあったんだけど消えてしまったので分かりませんが、きっとお互いにいいことがあるはず！
+http://l.bitcasa.com/EOJyoc8l" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://k-nishijima.github.io/2013/03/blogspot-2013-03-09-bitcasa/" />
+<meta property="article:published_time" content="2013-03-09T11:11:00+09:00" />
+<meta property="article:modified_time" content="2013-03-09T11:11:00+09:00" />
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Bitcasaが熱い！（けど息絶えたorz）"/>
+<meta name="twitter:description" content="2014年10月26日追記：
+というわけで、1年半くらい頑張ったのですが、とうとう無料プランが終了しましたorz
+合掌・・・＼(^o^)／ｵﾜﾀ 追記終わり：
+個人的に随分前から注目はしていたのですが、ようやく本サービス開始ということで黄金期に入るのか、はたまた消えるのか分かりませんが、数あるクラウド系サービスの中で今自分の中ではBitcasaが熱いです（AWSを例外とすれば、ね）。
+まだサインアップされていない方は、以下からサインアップするときっといいことがありますので是非:)
+http://l.bitcasa.com/EOJyoc8l
+
+Bitcasaとは？というのは他に多数上がっている記事に譲るとして、ここではざっと使い勝手やメリットデメリットなどを軽く挙げます。
+まずDropboxとの大きな違いは、ローカルディスクをミラーリングするだけではないので、ローカルディスクよりも大きな容量を保存することができます。なので、ローカルファイル（というかディレクトリ）をミラーリングしてバックアップ的な使い方もできますし、ハードディスクの肥やしになりそうな例えばデジカメ写真は、アップロード後にローカルから削除して空き容量を増やす、ということもできます。
+で、話題になっていると思いますが容量無制限といっても、実際にはプロバイダなどの帯域制限がありますから、例えば自宅からは1ヶ月に30G以上アップロード出来ないとか、CATVみたいに上り回線が細いところとか（はい、私のことです&hellip;orz）諸々物理的な制約がありますのでご注意下さい。
+クライアントはMac/Win/iPhone/Android/そしてアルファ版ですがLinux版もありました。
+Android版はNexus7と携帯に入れていますが、シンプルながら動作はいずれも良好です。写真やPDFの閲覧（これは落としてきてアプリ起動してるだけか）、MP3の再生など基本的な機能が揃っています。
+ですが、個々のアプリとしての機能はかなり貧弱です。例えば、MP3の再生機能はありますが、アルバム単位で順次再生しかできないとか、1曲終わったら次をダウンロードして再生、という動きをしているっぽいのでWiFi環境なら問題なくクラウドジュークボックスになるのですが、外出時3G回線でとなると曲と曲の間に「し〜ん」となってしまうとか、色々未熟な感じです。前の曲を再生中に次の曲のサイズと回線速度を見て、バックグラウンドでダウンロードしておく、なんていうインテリジェンスな動きはこれっぽっちもありません。
+まあこの辺は、いずれAPIが公開されれば誰かがこぞって改善するでしょうから、しばらく待ちましょう。腕に覚えのある開発者の方は
+https://www.bitcasa.com/developers
+から登録しておいて下さい。
+さてMac版のクライアントの方ですが、これは僕の環境では今ひとつ安定性にかけるような感じです。いや、ファイルのやり取りとかは問題無さそうなんですが、マウントしているディスクアイコンをクリックしても、時々中身が何も表示されないとか。
+これ、実はFinder拡張であるXtraFinderを使っているせいかもしれません。切り分けてないのでなんとも言えないんですが。
+また、いくつかの記事で触れられていた気がしますが、どうやらローカルで暗号化してから(?)ファイルをアップロードしているようなので、細かいファイルが多数ある場合は結構CPUパワーを食います。
+容量無制限だったらそりゃTimeMachineに使うでしょ！って記事を書こうと思っていたのですがnnasakiさんに先を越されたorzので、リンク張っておきます。
+自分は小さく400GBくらいのスパーズディスクを作りましたが、これだと初期サイズ440MB位なので、アップロードもそれほど苦ではありません。
+問題なければs3backerのはやめて、こちらに移行しようと思ってます。先月15ドルくらい行っちゃってるので。。。
+あ、nnasakiさんの仰っている「s3は従量制でトランザクション料も別途取られる」は微妙にあっていて間違っているので1つ指摘を。
+ 容量に対して従量制 ＝ OK トランザクション料（多分もろもろ通信費の意味だと思いますが）
+→ リクエスト料金（ファイル一覧したりなんだり） : 従量制
+データ転送量：上り（S3への書き込み）は無料、下り（S3からのダウンロード）は従量制  まあ詳しくは料金表をご確認下さい。
+で、これを書いた上で「BitcasaってバックエンドはS3使ってるんだぜ」ってのを考えると、月たった10ドルで容量無制限ってあんた、よっぽど自社の重複削除技術に自信があるのか、はたまた無謀な賭けなのか、どっちに転ぶかが見ものです。いいですなぁ、何れにしてもAWSはがっぽり儲かる、とwww
+さあ、これを読んでサインアップしてみたくなったアナタ、↓よりサインアップするのです。特典が何なのか、どこかに書いてあったんだけど消えてしまったので分かりませんが、きっとお互いにいいことがあるはず！
+http://l.bitcasa.com/EOJyoc8l"/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Archived my historic blog" rel="home">
+				<div class="logo__title">Archived my historic blog</div>
+				
+			</a>
+		</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Bitcasaが熱い！（けど息絶えたorz）</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2013-03-09T11:11:00&#43;09:00">2013-03-09</time></div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p>2014年10月26日追記：<br>
+というわけで、1年半くらい頑張ったのですが、とうとう<a href="https://www.google.co.jp/webhp?ie=UTF-8&amp;q=bitcasa%20%E7%B5%82%E4%BA%86">無料プランが終了</a>しましたorz</p>
+<h2 id="合掌oｵﾜﾀ">合掌・・・＼(^o^)／ｵﾜﾀ</h2>
+<p>追記終わり：</p>
+<p>個人的に随分前から注目はしていたのですが、ようやく本サービス開始ということで黄金期に入るのか、はたまた消えるのか分かりませんが、数あるクラウド系サービスの中で今自分の中では<a href="http://www.bitcasa.com/">Bitcasa</a>が熱いです（AWSを例外とすれば、ね）。</p>
+<p>まだサインアップされていない方は、以下からサインアップするときっといいことがありますので是非:)<br>
+<a href="http://l.bitcasa.com/EOJyoc8l">http://l.bitcasa.com/EOJyoc8l</a></p>
+<p><span id="more"></span></p>
+<p>Bitcasaとは？というのは他に多数上がっている記事に譲るとして、ここではざっと使い勝手やメリットデメリットなどを軽く挙げます。</p>
+<p>まずDropboxとの大きな違いは、ローカルディスクをミラーリングするだけではないので、ローカルディスクよりも大きな容量を保存することができます。なので、ローカルファイル（というかディレクトリ）をミラーリングしてバックアップ的な使い方もできますし、ハードディスクの肥やしになりそうな例えばデジカメ写真は、アップロード後にローカルから削除して空き容量を増やす、ということもできます。</p>
+<p>で、話題になっていると思いますが容量無制限といっても、実際にはプロバイダなどの帯域制限がありますから、例えば自宅からは1ヶ月に30G以上アップロード出来ないとか、CATVみたいに上り回線が細いところとか（はい、私のことです&hellip;orz）諸々物理的な制約がありますのでご注意下さい。</p>
+<p>クライアントはMac/Win/iPhone/Android/そしてアルファ版ですが<a href="https://www.bitcasa.com/download-linux">Linux版</a>もありました。</p>
+<p>Android版はNexus7と携帯に入れていますが、シンプルながら動作はいずれも良好です。写真やPDFの閲覧（これは落としてきてアプリ起動してるだけか）、MP3の再生など基本的な機能が揃っています。<br>
+ですが、個々のアプリとしての機能はかなり貧弱です。例えば、MP3の再生機能はありますが、アルバム単位で順次再生しかできないとか、1曲終わったら次をダウンロードして再生、という動きをしているっぽいのでWiFi環境なら問題なくクラウドジュークボックスになるのですが、外出時3G回線でとなると曲と曲の間に「し〜ん」となってしまうとか、色々未熟な感じです。前の曲を再生中に次の曲のサイズと回線速度を見て、バックグラウンドでダウンロードしておく、なんていうインテリジェンスな動きはこれっぽっちもありません。</p>
+<p>まあこの辺は、いずれAPIが公開されれば誰かがこぞって改善するでしょうから、しばらく待ちましょう。腕に覚えのある開発者の方は<br>
+<a href="https://www.bitcasa.com/developers">https://www.bitcasa.com/developers</a><br>
+から登録しておいて下さい。</p>
+<p>さてMac版のクライアントの方ですが、これは僕の環境では今ひとつ安定性にかけるような感じです。いや、ファイルのやり取りとかは問題無さそうなんですが、マウントしているディスクアイコンをクリックしても、時々中身が何も表示されないとか。<br>
+これ、実はFinder拡張である<a href="http://www.trankynam.com/xtrafinder/">XtraFinder</a>を使っているせいかもしれません。切り分けてないのでなんとも言えないんですが。</p>
+<p>また、いくつかの記事で触れられていた気がしますが、どうやらローカルで暗号化してから(?)ファイルをアップロードしているようなので、細かいファイルが多数ある場合は結構CPUパワーを食います。</p>
+<p>容量無制限だったらそりゃTimeMachineに使うでしょ！って記事を書こうと思っていたのですが<a href="http://nnasaki.hatenablog.com/entry/2013/02/14/023146">nnasakiさんに先を越された</a>orzので、リンク張っておきます。<br>
+自分は小さく400GBくらいのスパーズディスクを作りましたが、これだと初期サイズ440MB位なので、アップロードもそれほど苦ではありません。<br>
+問題なければs3backerのはやめて、こちらに移行しようと思ってます。先月15ドルくらい行っちゃってるので。。。</p>
+<p>あ、nnasakiさんの仰っている「s3は従量制でトランザクション料も別途取られる」は微妙にあっていて間違っているので1つ指摘を。</p>
+<ul>
+<li>容量に対して従量制 ＝ OK</li>
+<li>トランザクション料（多分もろもろ通信費の意味だと思いますが）<br>
+→ リクエスト料金（ファイル一覧したりなんだり） : 従量制<br>
+　
+データ転送量：上り（S3への書き込み）は無料、下り（S3からのダウンロード）は従量制</li>
+</ul>
+<p>まあ詳しくは<a href="http://aws.amazon.com/jp/s3/pricing/">料金表</a>をご確認下さい。</p>
+<p>で、これを書いた上で「BitcasaってバックエンドはS3使ってるんだぜ」ってのを考えると、月たった10ドルで容量無制限ってあんた、よっぽど自社の重複削除技術に自信があるのか、はたまた無謀な賭けなのか、どっちに転ぶかが見ものです。いいですなぁ、何れにしてもAWSはがっぽり儲かる、とwww</p>
+<p>さあ、これを読んでサインアップしてみたくなったアナタ、↓よりサインアップするのです。特典が何なのか、どこかに書いてあったんだけど消えてしまったので分かりませんが、きっとお互いにいいことがあるはず！</p>
+<p><a href="http://l.bitcasa.com/EOJyoc8l">http://l.bitcasa.com/EOJyoc8l</a></p>
+
+		</div>
+	</article>
+</main>
+
+
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/2013/03/blogspot-2013-03-09-x/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">沖縄高専xギー沖発火村にリモート参加して成果物が出来なかった件</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/2013/03/blogspot-2013-03-31-nespresso/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">ネスプレッソはアップルと同種の魔法を持っている、気がする</p>
+		</a>
+	</div>
+</nav>
+
+
+
+			</div>
+			<aside class="sidebar">
+
+<div class="widget-recent widget">
+	<h4 class="widget__title">about</h4>
+	<div class="widget__content about_widget">
+      <a class="widget__link" href="/about/">About me and this site</a></li>
+
+    </div>
+        <a class="twitter-timeline" data-width="300" data-height="500" href="https://twitter.com/k_nishijima?ref_src=twsrc%5Etfw">Tweets by k_nishijima</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        
+</div>
+
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+              <time class="meta__text" datetime="2017-10-14T12:10:00&#43;09:00">2017-10-14</time>
+              <a class="widget__link" href="/2017/10/blogspot-2017-10-14-medium/">ブログをMediumに引っ越しました</a></li>
+			<li class="widget__item">
+              <time class="meta__text" datetime="2017-07-01T17:21:00&#43;09:00">2017-07-01</time>
+              <a class="widget__link" href="/2017/07/blogspot-2017-07-01-hackers-champloo2017/">ハッカーズチャンプルー2017、今年も無事終わりました</a></li>
+			<li class="widget__item">
+              <time class="meta__text" datetime="2017-05-13T14:24:00&#43;09:00">2017-05-13</time>
+              <a class="widget__link" href="/2017/05/blogspot-2017-05-13-jaws-ug-cloud-on-beach-2017/">JAWS-UG沖縄 Cloud on the BEACH 2017 今年もいい天気でした！</a></li>
+			<li class="widget__item">
+              <time class="meta__text" datetime="2017-01-01T17:33:00&#43;09:00">2017-01-01</time>
+              <a class="widget__link" href="/2017/01/blogspot-2017-01-01-eip/">2017年、今年はどんな年にしますか</a></li>
+			<li class="widget__item">
+              <time class="meta__text" datetime="2016-07-11T22:55:00&#43;09:00">2016-07-11</time>
+              <a class="widget__link" href="/2016/07/blogspot-2016-07-11-hackers-champloo2016/">ハッカーズチャンプルー2016、無事終わりました</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/arduino/" title="arduino">arduino (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/as1410/" title="as1410">as1410 (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/aws/" title="aws">aws (29)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cassandra/" title="cassandra">cassandra (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/desire/" title="desire">desire (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/golang/" title="golang">golang (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hackers-champloo/" title="hackers-champloo">hackers-champloo (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/java/" title="java">java (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mac/" title="mac">mac (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/remote-work/" title="remote-work">remote-work (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/scala/" title="scala">scala (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/study-group/" title="study-group">study-group (42)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tightbell/" title="tightbell">tightbell (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ubuntu/" title="ubuntu">ubuntu (9)</a>
+	</div>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Archives</h4>
+	<div class="widget__content">
+      
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2020">2020</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2017">2017</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2016">2016</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2015">2015</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2014">2014</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2013">2013</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2012">2012</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2011">2011</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2010">2010</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2009">2009</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2008">2008</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2006">2006</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2005">2005</a>
+        
+        <a class="widget-taglist__link widget__link btn" href="/archive/#2004">2004</a>
+        
+	</div>
+</div>
+
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Facebook" rel="noopener noreferrer" href="https://facebook.com/nishijima.koichiro" target="_blank">
+				<svg class="widget-social__link-icon icon icon-facebook" width="24" height="24" viewBox="0 0 352 352"><path d="m0 32v288c0 17.5 14.5 32 32 32h288c17.5 0 32-14.5 32-32v-288c0-17.5-14.5-32-32-32h-288c-17.5 0-32 14.5-32 32zm320 0v288h-83v-108h41.5l6-48h-47.5v-31c0-14 3.5-23.5 23.5-23.5h26v-43.5c-4.4-.6-19.8-1.5-37.5-1.5-36.9 0-62 22.2-62 63.5v36h-42v48h42v108h-155v-288z"/></svg>
+				<span>Facebook</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/k_nishijima" target="_blank">
+				<svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
+				<span>Twitter</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/k-nishijima" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+
+		
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Koichiro Nishijima.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>
