@@ -2,7 +2,7 @@ languageCode = "ja"
 publishDir = "docs"
 
 
-baseurl = "/"
+baseurl = "https://k-nishijima.github.io/"
 title = "Archived my historic blog"
 paginate = "15" # Number of posts per page
 theme = "mainroad"
@@ -13,13 +13,13 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
     post = "/:year/:month/:filename"
 
 [Author] # Used in authorbox
-  name = "John Doe"
-  bio = "John Doe's true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it."
+  name = "K Nishijima"
+  bio = "I am a cloud computing and community enthusiast. I've been working at home since 2011. And love open source and craft beer."
   avatar = "img/avatar.png"
 
 [Params]
   subtitle = "" # Subtitle of your site. Used in site header
-  description = "John Doe's Personal blog about everything" # Site description. Used in meta description
+  description = "K Nishijimaのぶろぐ アーカイブです。" # Site description. Used in meta description
   copyright = "Koichiro Nishijima" # Footer copyright holder, otherwise will use site title
   opengraph = true # Enable OpenGraph if true
   twitter_cards = true # Enable Twitter Cards if true
